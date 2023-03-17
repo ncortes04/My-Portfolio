@@ -1,0 +1,20 @@
+.projects-container {
+    background-color: #f8f8f8;
+    height: 700px;
+
+}
+.card {
+    background-color: grey;
+
+}
+
+
+.arrow {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+}
+.buttons {
+    display: flex;
+    align-items: start;
+}
