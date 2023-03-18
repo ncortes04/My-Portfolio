@@ -1,20 +1,28 @@
-.projects-container {
+.projects-parent-container{
     background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 700px;
+    flex-direction: column;
+}
 
+.projects-carousel {
+   width: 100%;
 }
 .card {
     background-color: grey;
-
+    height: 400px;
+    margin-left: 30px;
+    margin-right: 30px;
+    
 }
+.customSlide{ position: fixed!important; }
 
 
-.arrow {
-    width: 100px;
-    height: 100px;
-    background-color: purple;
-}
-.buttons {
-    display: flex;
-    align-items: start;
+.carousel-button-container {
+    background-color: red;
+    align-self: flex-end;
+    margin-right: 50px;
+    position: relative;
 }
