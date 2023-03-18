@@ -1,4 +1,62 @@
 .aboutme-container {
-    background-color: red;
-    height: 60vh;
+    height: 70vh;
+    background-color: #7CC6FE;
+    display: flex;
 }
+
+.aboutme-body {
+    height: 100px;
+}
+.about-body-left {
+    background-color: blue;
+    width: 50%;
+    margin: 20px;
+}
+.about-body-right {
+    background-color: red;
+    width: 50%;
+    margin: 20px;
+}
+.aboutme-title {
+    padding: 0;
+    margin: 20px;
+    font-size: 40px;
+    height: 40px;
+    max-width: 200px;
+    position: relative;
+    
+}
+
+.aboutme-title::before {
+  content: '';
+  position: absolute;
+  top: 0px; 
+  right: 0px;
+  width: 40px;
+  height: 20px;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: none; 
+  border-left: none; 
+}
+.aboutme-title::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; 
+    left: 0px; 
+    width: 40px; 
+    height: 20px;
+    border-top: none; 
+    border-right: none; 
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

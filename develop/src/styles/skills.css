@@ -1,0 +1,40 @@
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #3d3d3d;
+    box-shadow:  inset 0px 11px 8px -10px,
+    inset 0px -11px 8px -10px; 
+}
+.skills-title {
+    font-size: 45px;
+    margin: 10px;
+    padding: 40px;
+    color: white;
+}
+.skills-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    opacity: 0;
+    gap: 15px;
+    padding: 20px;
+}
+.card-container {
+    width: 300px;
+    background-color: #f3f4f5;
+    text-align: left;
+}
+.card-header {
+    font-weight: 650;
+    font-size: 18px;
+    align-self: flex-start;
+}
+.card-description {
+    font-size: 17px;
+    line-height: 1.4em;
+    color: rgb(81, 80, 80);
+}

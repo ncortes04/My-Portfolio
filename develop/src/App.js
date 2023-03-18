@@ -1,9 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/navbar';
 import Header from './components/header';
 import AboutMe from './components/aboutMe';
 import Projects from './components/projects';
+import Skills from './components/skills';
 import { ScrollProvider } from './provider/contextProvider';
 function App() {
   return (
@@ -11,8 +11,9 @@ function App() {
       <ScrollProvider>
          <NavBar/>
          <Header/>
-         <Projects/>
+         <Skills/>
          <AboutMe/>
+         <Projects/>
       </ScrollProvider>
     </div>
   );

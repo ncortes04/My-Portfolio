@@ -16,7 +16,6 @@
 }
 .active {
     background-color: black;
-    box-shadow: 0 0 15px 10px;
 }
 .middle-nav-div {
     display: flex;
@@ -25,10 +24,10 @@
 .middle-nav-div a {
     display: inline-block;
     position: relative;
-    font-weight: bold;
+    font-weight: 500;
     color: white;
     cursor: pointer;
-    font-size: 17px;
+    font-size: 15px;
 }
 .middle-nav-div a::after {
     content: '';

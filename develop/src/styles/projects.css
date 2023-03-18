@@ -1,37 +1,52 @@
 .projects-parent-container{
-    background-color: #f8f8f8;
+    background-color: #9a9190;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    height: 550px;
+    height: 650px;
     flex-direction: column;
 }
 .project-header-div {
     display: flex;
-    height: 100%;
-    align-items: center;
     width: 100%;
-    background-color: red;
 }
 
 .project-title-div {
-    background-color: blue;
-    width: 500px;
-    height: 90%;
+    width: 40%;
+    text-align: left;
 }
-
+.project-title {
+    padding: 0;
+    margin: 30px;
+    font-size: 60px;
+    max-width: 300px;
+    color: white;
+}
+.header-subtitle-div {
+    width: 60%;
+    text-align: left;
+}
+.header-subtitle-div p{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2em;
+    margin: 32px;
+    max-width: 600px;
+    color: white;
+}
 .projects-carousel {
    width: 100%;
 }
 .slick-slide > div {
-  margin: 0 50px;
-  height: 300px;
+  margin: 5px 50px 15px;
+  height: 350px;
   background-color: red;
 
   transition: all .4s ease-in-out;
 }
 .slick-list {
-  margin: 0 -10px;
+  margin: 10px -10px 40px;
+  position: relative;
 }
 
 .arrowbuttons {
@@ -47,11 +62,21 @@
 .arrowbuttons:disabled{
     color: #ccc;
     cursor: default;
+    padding: 0;
+}
+.current-slide-index {
+    font-size: 18px;
+    letter-spacing: 0;
+    font-weight: 500;
+}
+
+.limit-number {
+    color: #ccc
 }
 .carousel-button-container {
     align-self: flex-end;
     display: flex;
     gap: 20px;
     margin-right: 50px;
-    position: relative;
+    position: absolute;
 }
