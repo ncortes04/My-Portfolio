@@ -3,7 +3,6 @@ import { useScroll } from '../provider/contextProvider'
 
 function NavBar(){
     const scroll = useScroll()
-    console.log(scroll)
     return(
         <nav className={scroll < 100 ? "navbar-container": "navbar-container active"}>
              <h1 className='nav-header'>CREATIVE DESIGN</h1>
