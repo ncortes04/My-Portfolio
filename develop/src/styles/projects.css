@@ -4,10 +4,12 @@
     align-items: center;
     justify-content: flex-end;
     height: 650px;
+    gap: 20px;
     flex-direction: column;
 }
 .project-header-div {
     display: flex;
+    justify-content: center;
     width: 100%;
 }
 
@@ -22,18 +24,7 @@
     max-width: 300px;
     color: white;
 }
-.header-subtitle-div {
-    width: 60%;
-    text-align: left;
-}
-.header-subtitle-div p{
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.2em;
-    margin: 32px;
-    max-width: 600px;
-    color: white;
-}
+
 .projects-carousel {
    width: 100%;
 }

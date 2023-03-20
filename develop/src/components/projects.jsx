@@ -63,15 +63,10 @@ const Projects = () => {
 return (
   <div className='projects-parent-container'>
     <div className='project-header-div'>
-            <div className='project-title-div'>
-              <h3 className='project-title'>
-              Featured Projects
-              </h3>
-            </div>
-     
-            <div className='header-subtitle-div'>
-                <p className='header-subtitle'>Heres 5 of my 30 projects. These projects were created during my time in my coding bootcamp and some were personal projects. I believe these projects demonstrate my knowledge of relevent frameworks, languages, and technologies.</p>
-            </div>
+     <div className='aboutme-title-div'>
+          <h3 className='aboutme-title'>About Me</h3>
+          <p className='abouttitle-description'>Heres 5 of my 30 projects. These projects were created during my time in my coding bootcamp and some were personal projects. I believe these projects demonstrate my knowledge of relevent frameworks, languages, and technologies.</p>
+    </div>
     </div>
     <div className='projects-carousel'>
       <Slider beforeChange={handleSlideChange} ref={sliderRef} {...setting} dots={true}>{renderSlides()}</Slider>

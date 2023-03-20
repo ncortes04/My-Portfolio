@@ -34,7 +34,7 @@
     align-self: flex-start;
 }
 .card-description {
-    font-size: 17px;
-    line-height: 1.4em;
-    color: rgb(81, 80, 80);
+    font-size: 20px;
+    line-height: 1.3em;
+    color: #666;
 }
