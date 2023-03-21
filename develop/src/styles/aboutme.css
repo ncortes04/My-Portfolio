@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
   padding: 20px;
   box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.3);;
 }
@@ -31,6 +30,7 @@
   flex-direction: column;
   }
   .about-body-right img {
+  max-width: 400px;
   border-radius: 25%;
   position: relative;
   display: inline-block;
@@ -42,6 +42,7 @@
   position: relative;
   width: 70%;
   flex-direction: column;
+  margin-bottom: 30px;
 }
 .abouttitle-description {
   font-size: 20px;
@@ -134,7 +135,9 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
+  text-decoration: none;
   border-radius: 5px;
+  color: black;
   box-shadow: 0 5px 15px 3px rgba(0, 0, 0, 0.233);
   transition: transform .3s ease-in;
   cursor: pointer;
@@ -149,6 +152,7 @@
 }
 .aboutme-body {
   flex-direction: column;
+  align-items: center;
 }
 .about-body-left {
   width: 100%;
@@ -156,8 +160,22 @@
 .about-body-right {
   width: 100%;
 }
-.about-right-bottom {
-  align-items: center;
-  justify-content: center;
+
+.image-container img {
+  width: 100%;
 }
+.skills-flex {
+  width: 100%;
+}
+
+}
+@media screen and (max-width:500px) {
+  .aboutme-title-div {
+    width: 100%;
+    flex-direction: column;
+  }
+  .abouttitle-description {
+    text-align: start;
+    padding: 10px;
+  }
 }

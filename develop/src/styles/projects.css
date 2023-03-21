@@ -1,11 +1,12 @@
 .projects-parent-container{
-    background-color: #9a9190;
+    background-color: #3d3d3d;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    height: 650px;
     gap: 20px;
     flex-direction: column;
+    box-shadow:  inset 0px 11px 8px -10px,
+    inset 0px -11px 8px -10px; 
 }
 .project-header-div {
     display: flex;
@@ -14,8 +15,11 @@
 }
 
 .project-title-div {
-    width: 40%;
-    text-align: left;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 70%;
+    flex-direction: column;
 }
 .project-title {
     padding: 0;
@@ -24,24 +28,108 @@
     max-width: 300px;
     color: white;
 }
-
+.project-description {
+    font-size: 20px;
+    color: white;
+    max-width: 60rem;
+    line-height: 1.7;
+    margin-bottom: 5px;
+}
+.project-title-div::after {
+    content: '';
+    position: absolute;
+    bottom:0;
+    width: 10%;
+    height: 10px;
+    border-radius: 50px;
+    left: 50%;
+    bottom: -20px;
+    transform: translate(-50%); 
+    background: #fbb72c;
+  }
 .projects-carousel {
    width: 100%;
 }
+
 .slick-slide > div {
   margin: 5px 50px 15px;
-  height: 350px;
-  background-color: red;
-
   transition: all .4s ease-in-out;
 }
-.slick-list {
-  margin: 10px -10px 40px;
-  position: relative;
+.flex-container {
+    display: flex;
+    gap: 20px;
+    background-color: #f3f4f5;
+    padding: 20px;
+}
+.img-container {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
 }
 
+.text-container {
+    text-align: start;
+}
+.text-container p {
+    font-size: 20px;
+    color: #666;
+    max-width: 60rem;
+    line-height: 1.7;
+    margin: 0;
+}
+.text-container h3 {
+    margin: 0 0 10 0;
+}
+.technologies-flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 60%;
+}
+.technologies-card {
+    padding: 12px;
+    border-radius: 10px;
+    background-color: rgba(105, 109, 110, 0.199);
+}
+.technologies-card p {
+    font-weight: 600;
+    color: black;
+}
+.repo-button {
+    position: absolute;
+    text-decoration: none;
+    background-color: #f8c663;
+    color: black;
+    opacity: .5;
+    border: 0;
+    bottom:20px;
+    right: 20px;
+    width: fit-content;
+    padding: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px 3px rgba(0, 0, 0, 0.233);
+    transition: all .3s ease-in;
+    cursor: pointer;
+}
+.repo-button:hover {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+.slick-list {
+  margin: 10px -10px 40px;
+}
+.slick-dots li button::before{
+    color: white;
+}
+.slick-dots li.slick-active button:before {
+    color: white;
+}
 .arrowbuttons {
     background-color: transparent;
+    color: #ccc;
     border: none;
     cursor: pointer;
     font-size: 2rem;
@@ -51,7 +139,7 @@
     transition: color 0.2s;
 }
 .arrowbuttons:disabled{
-    color: #ccc;
+    color: black;
     cursor: default;
     padding: 0;
 }
@@ -70,4 +158,29 @@
     gap: 20px;
     margin-right: 50px;
     position: absolute;
+}
+@media screen and (max-width: 1250px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media  screen and (max-width: 1050px) {
+  
+    .repo-button {
+        padding: 12px;
+        font-weight: 500;
+        letter-spacing: normal;
+    }
+    .img-container img {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .slick-list {
+         margin: 10px -10px 70px;
+    }
+    .arrowbuttons {
+        margin: 0px;
+    }
 }

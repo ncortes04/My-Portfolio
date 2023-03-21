@@ -1,0 +1,131 @@
+.contact-container {
+    display: flex;
+    padding-bottom: 50px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.3);;
+    background: #fafafa;
+}
+.contactme-title-div {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 70%;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .contactme-description {
+    font-size: 20px;
+    color: #666;
+    max-width: 60rem;
+    line-height: 1.7;
+    margin-bottom: 5px;
+  }
+  
+  .contactme-title-div::after {
+    content: '';
+    position: absolute;
+    bottom:0;
+    width: 10%;
+    height: 10px;
+    border-radius: 50px;
+    left: 50%;
+    bottom: -20px;
+    transform: translate(-50%); 
+    background: #fbb72c;
+  }
+  .contactme-title {
+      padding: 0;
+      font-size: 40px;
+      margin: 15px;
+      height: 40px;
+      white-space: nowrap;
+      text-transform: uppercase;
+      color: #181717;
+  }
+  .contact-link-title-div {
+    text-align: left;
+    border-right: 2px solid rgb(98, 96, 96);
+  }
+  .contact-link-title {
+    text-transform: uppercase;
+    text-shadow: none;
+  }
+  .contactme-links-div {
+    background-color: #f8c663;
+    box-shadow: 0 0 15px 3px rgba(128, 128, 128, 0.432);
+    padding: 30px;
+    display: flex;
+    border-radius: 30px;
+    gap: 20px;
+    justify-content: center;
+    width: 70%;
+    max-width: 700px;
+}
+.contactme-links-div p{
+    font-size: 18px;
+    font-weight: 600;
+    white-space: nowrap;
+    margin: 0;
+}
+.contact-information {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+  .contactme-left {
+    width: 50%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .contactme-right {
+    text-align: start;
+  }
+  .contactme-links-div label {
+    font-weight: 700;
+    font-size: 22px;
+    font-family: Sans-Serif;
+    text-transform: uppercase;
+    color: rgb(98, 96, 96);
+    margin: 0;
+  }
+
+  .nav-link-div-contacts {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-link-div-contacts span{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-right: 30px;
+    margin-left: 10px;
+  }
+  .nav-link-div-contacts span a {
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+  }
+  .nav-link-div-contact span a:hover {
+    opacity: 1;
+    scale: .9;
+  }
+  @media screen and (max-width: 850px) {
+    .contactme-links-div {
+      flex-direction: column;
+    }
+    .contact-link-title-div {
+      border-right: none;
+      border-bottom: 2px solid #666;
+    }
+  }
+  @media screen and (max-width: 650px) {
+  .contact-information {
+    flex-direction: column;
+    gap: 10px;
+  }
+  }

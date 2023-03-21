@@ -7,7 +7,6 @@ import githubsvg from '../assets/icons8-git.svg'
 import mongosvg from '../assets/icons8-mongodb.svg'
 import mysqlsvg from '../assets/icons8-my-sql.svg'
 import reactsvg from '../assets/logo192.png'
-import { useScroll } from '../provider/contextProvider'
 
 import '../styles/skills.css'
 function Skills() {
@@ -24,7 +23,7 @@ function Skills() {
               observer.unobserve(containerRef.current);
             }
           },
-          { threshold: 0.5 }
+          { threshold: .2 }
         );
   
         observer.observe(containerRef.current);
@@ -47,7 +46,7 @@ function Skills() {
             { transform: 'translateX(-100%)', opacity: '0' },
             { transform: 'translateX(0)', opacity: '1' }
           ],
-          { duration: 2300, easing: 'ease-out' }
+          { duration: 1500, easing: 'ease-out' }
         ).onfinish = () => {
           // Set final position to center of screen
           container.style.transform = 'translateX(0)';
@@ -68,6 +67,7 @@ function Skills() {
   
     return(
         <div className="skills-container">
+          <a id="skills" className="link-tag"></a>
             <h2 className="skills-title"> My Skills</h2>
             <div className="skills-flex-container" ref={containerRef}>
                 <div className="card-container">
@@ -75,7 +75,7 @@ function Skills() {
                         <object data={javascript} width='70'/>
                     </div>
                     <p className="card-header">Vanilla Javascript</p>
-                    <p className="card-description"> Lorem ipsum dolor sit amet consect incidunt aperiam ratione neque ea non laudantium corrupti consectetur accusantium reprehenderit provident eaque itaque? Similique, officia commodi.</p>
+                    <p className="card-description">Javascript is my primary coding language. I have worked with Javascript for over a year now and have a solid understanding of its key concepts. I have coded over 20 projects using Javascript and enjoy every aspect of it.</p>
                 </div>
                 <div className="card-container">
                     <div className="logo-container">
@@ -83,28 +83,28 @@ function Skills() {
                         <object data={csssvg} width='70'/>
                     </div>
                     <p className="card-header">HTML & CSS</p>
-                    <p className="card-description"> Lorem ipsum dolor sit amet consect incidunt aperiam ratione neque ea non laudantium corrupti consectetur accusantium reprehenderit provident eaque itaque? Similique, officia commodi.</p>
+                    <p className="card-description"> I have been working with HTML and CSS for over a year. I have a solid understanding on how CSS and HTML work hand and hand to create the front end. </p>
                 </div>
                 <div className="card-container">
                     <div className="logo-container">
                         <object data={reactsvg} width='70'/>
                     </div>
                     <p className="card-header">React</p>
-                    <p className="card-description"> Lorem ipsum dolor sit amet consect incidunt aperiam ratione neque ea non laudantium corrupti consectetur accusantium reprehenderit provident eaque itaque? Similique, officia commodi.</p>
+                    <p className="card-description"> I have been working with React for about 5 months. React is my favrite framework due to it being Javascript friendly, fast, and easy to understand. I have a solid understanding of the fundamental react features.</p>
                 </div>
                 <div className="card-container">
                     <div className="logo-container">
                         <object data={nodesvg} width='70'/>
                     </div>
                     <p className="card-header">Node.Js</p>
-                    <p className="card-description"> Lorem ipsum dolor sit amet consect incidunt aperiam ratione neque ea non laudantium corrupti consectetur accusantium reprehenderit provident eaque itaque? Similique, officia commodi.</p>
+                    <p className="card-description">I have used node.js for my entire coding journey. I have used node to create all my Javascript projects. I have a solid understanding of how node works and how it communicates with code.</p>
                 </div>
                 <div className="card-container">
                     <div className="logo-container">
                         <object data={githubsvg} width='70'/>
                     </div>
                     <p className="card-header">Gtihub</p>
-                    <p className="card-description"> Lorem ipsum dolor sit amet consect incidunt aperiam ratione neque ea non laudantium corrupti consectetur accusantium reprehenderit provident eaque itaque? Similique, officia commodi.</p>
+                    <p className="card-description">I have been using Github Since i started coding. Github has been my primary wayof sharing code with my fellow peers. I was taught how to use GitHub with fellow peers effectively and how not to. I have used github to share multiple projects with my peers and generate an application.</p>
                 </div>
                 <div className="card-container">
                     <div className="logo-container">
@@ -112,7 +112,7 @@ function Skills() {
                         <object data={mysqlsvg} width='70'/>
                     </div>
                     <p className="card-header">Mongo, MySql</p>
-                    <p className="card-description"> Lorem ipsum dolor sit amet consect incidunt aperiam ratione neque ea non laudantium corrupti consectetur accusantium reprehenderit provident eaque itaque? Similique, officia commodi.</p>
+                    <p className="card-description">I have been working wih monogo for 6 months and MySql for 8 months. I have a much better understand of MongoDb and tend to side with it more. I choose MongoDb more often due to it non relational aspects an how small my projectts are.</p>
                 </div>
             </div>
         </div>

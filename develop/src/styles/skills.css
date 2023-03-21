@@ -6,10 +6,11 @@
     background-color: #3d3d3d;
     box-shadow:  inset 0px 11px 8px -10px,
     inset 0px -11px 8px -10px; 
+    padding: 10px;
 }
 .skills-title {
     font-size: 45px;
-    margin: 10px;
+    margin: 0;
     padding: 40px;
     color: white;
 }
@@ -18,15 +19,18 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    max-width: 1000px;
+    max-width: 1200px;
     opacity: 0;
     gap: 15px;
     padding: 20px;
 }
 .card-container {
     width: 300px;
+    min-height: 390px;
+    padding: 20px;
     background-color: #f3f4f5;
     text-align: left;
+    box-shadow: 2px 2px 8px 2px;
 }
 .card-header {
     font-weight: 650;

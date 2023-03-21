@@ -1,11 +1,13 @@
 import '../styles/aboutme.css'
-import  myself from '../assets/myself.jpg'
+import  myself from '../assets/myself.webp'
 function AboutMe() {
     return(
+        
         <div className="aboutme-container">
+             <a id="aboutme" className='link-tag'></a>
              <div className='aboutme-title-div'>
                     <h3 className='aboutme-title'>About Me</h3>
-                    <p className='abouttitle-description'>Here you will find insight on who I am, as well as other skills I have other skills I have.
+                    <p className='abouttitle-description'>Here you will find insight on who I am, as well as other skills I have.
                     I have a solid understanding of these technologies and how to use them; however, i would still categorize myself as basic understanding</p>
              </div>
              <div className='aboutme-body'>
@@ -29,7 +31,7 @@ function AboutMe() {
                             and teach me all there is to know about creating a scalable web application.
                             If you have an opportunity that matches any of my skills please feel free to contact me.
                         </p>
-                        <a className='contact-btn'> CONTACT </a>
+                        <a href="#contact" className='contact-btn'> CONTACT </a>
                     </div>
                     <div className='about-body-right'>
                         <div className='about-right-top'>

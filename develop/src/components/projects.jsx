@@ -1,29 +1,43 @@
 import React, {useRef, useState} from 'react';
 import Slider from 'react-slick';
+import shoppingAvail from'../assets/projects/populated.webp'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../styles/projects.css'
 const Projects = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
   const images = [
-    'https://via.placeholder.com/500x300',
-    'https://via.placeholder.com/500x300',
-    'https://via.placeholder.com/500x300',
-    'https://via.placeholder.com/500x300',
-    'https://via.placeholder.com/500x300',
+    {img: shoppingAvail,
+    description: 'A full stack E-commerce application with user authentication and authorization. This is a rather simplistic project that focused more on my ability to not only authenticate users but authorize them. This projects uses middleware and conditional statements to ensure the user has access to admin role page. The admin role allows the user to create posts, and categories.',
+    technologies: ['React', 'Express', 'MongoDB', 'JWT', ],
+    link: 'https://github.com/ncortes04/shopping-avail',
+  }, {img: shoppingAvail,
+    description: 'A full stack E-commerce application with user authentication and authorization. This is a rather simplistic project that focused more on my ability to not only authenticate users but authorize them. This projects uses middleware and conditional statements to ensure the user has access to admin role page. The admin role allows the user to create posts, and categories.',
+    technologies: ['React', 'Express', 'MongoDB', 'JWT', ],
+    link: 'https://github.com/ncortes04/shopping-avail',
+  }, {img: shoppingAvail,
+    description: 'A full stack E-commerce application with user authentication and authorization. This is a rather simplistic project that focused more on my ability to not only authenticate users but authorize them. This projects uses middleware and conditional statements to ensure the user has access to admin role page. The admin role allows the user to create posts, and categories.',
+    technologies: ['React', 'Express', 'MongoDB', 'JWT', ],
+    link: 'https://github.com/ncortes04/shopping-avail',
+  }, {img: shoppingAvail,
+    description: 'A full stack E-commerce application with user authentication and authorization. This is a rather simplistic project that focused more on my ability to not only authenticate users but authorize them. This projects uses middleware and conditional statements to ensure the user has access to admin role page. The admin role allows the user to create posts, and categories.',
+    technologies: ['React', 'Express', 'MongoDB', 'JWT', ],
+    link: 'https://github.com/ncortes04/shopping-avail',
+  },
+
   ];
 
   const setting = {
     centerMode: true,
     arrows: false,
-    centerPadding: '250px',
     infinite: false,
     responsive: [
       {
         breakpoint: 1200,
         settings: {
+          infinite: false,
           arrows: false,
-          centerPadding: '150',
+          centerPadding: '100px',
           centerMode: true,
         }
       },
@@ -32,16 +46,34 @@ const Projects = () => {
         settings: {
           arrows: false,
           centerMode: true,
-          centerPadding: '0px',
+          centerPadding: '5px',
         }
       }
     ]
 
   }
   const renderSlides = () =>
-  images.map((num, index) => (
+  images.map((card, index) => (
     <div key={index}>
-            <h3>dadddd</h3>
+      <div className='flex-container'>
+        <div className='img-container'>
+          <img src={card.img}loading="lazy"></img>
+          <a 
+          href="https://github.com/ncortes04/shopping-avail"
+          target="_blank"
+          className='repo-button'>View Code</a>
+        </div>
+        <div className='text-container'>
+          <h3>ABOUT THIS PROJECT</h3>
+          <p>{card.description}</p>
+          <h3>TECHNOLOGIES</h3>
+          <div className='technologies-flex'>
+            {card.technologies.map(item => {
+              return(<div className='technologies-card'><p>{item}</p></div>)
+            })}
+          </div>
+        </div>
+      </div>
     </div>
   ));
   const sliderRef = useRef(null);
@@ -62,10 +94,11 @@ const Projects = () => {
   
 return (
   <div className='projects-parent-container'>
+    <a id="projects" className='link-tag'></a>
     <div className='project-header-div'>
-     <div className='aboutme-title-div'>
-          <h3 className='aboutme-title'>About Me</h3>
-          <p className='abouttitle-description'>Heres 5 of my 30 projects. These projects were created during my time in my coding bootcamp and some were personal projects. I believe these projects demonstrate my knowledge of relevent frameworks, languages, and technologies.</p>
+     <div className='project-title-div'>
+          <h3 className='project-title'>Projects</h3>
+          <p className='project-description'>Heres 5 of my 30 projects. These projects were created during my time in my coding bootcamp and some were personal projects. I believe these projects demonstrate my knowledge of relevent frameworks, languages, and technologies.</p>
     </div>
     </div>
     <div className='projects-carousel'>
