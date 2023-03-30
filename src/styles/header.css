@@ -17,7 +17,7 @@
 .header-flex-left{
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     height: 100%;
     width: 100%;
     margin-left: 30px;
@@ -50,7 +50,7 @@
     position: absolute;
     right: 0;
     perspective: 400px;
-    text-align: start;
+    text-align: flex-start;
     transition: all 0.5s ease-out;
   }
   
@@ -126,7 +126,7 @@
     width: 100%;
   }
   .header-flex-left h2 {
-    text-align: start;
+    text-align: flex-start;
     padding: 0;
   }
   .header-flex-left p {

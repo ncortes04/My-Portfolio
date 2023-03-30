@@ -17,7 +17,6 @@
 .project-title-div {
     display: flex;
     align-items: center;
-    position: relative;
     width: 70%;
     flex-direction: column;
 }
@@ -55,8 +54,18 @@
   margin: 5px 50px 15px;
   transition: all .4s ease-in-out;
 }
+.project-card-upper {
+    display: flex;
+    gap: 20px;
+}
+.project-about-div {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
 .flex-container {
     display: flex;
+    flex-direction: column;
     gap: 20px;
     background-color: #f3f4f5;
     padding: 20px;
@@ -64,20 +73,23 @@
 .img-container {
     width: fit-content;
     height: fit-content;
+    min-width: 50%;
     position: relative;
 }
-
+.card-img {
+    width: 100%;
+}
 .text-container {
     text-align: start;
 }
-.text-container p {
+.flex-container p {
     font-size: 20px;
     color: #666;
     max-width: 60rem;
     line-height: 1.7;
     margin: 0;
 }
-.text-container h3 {
+.flex-container h3 {
     margin: 0 0 10 0;
 }
 .technologies-flex{
@@ -95,17 +107,22 @@
     font-weight: 600;
     color: black;
 }
+.project-links {
+    display: flex;
+    padding: 10px;
+    flex: 1;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px;
+}
 .repo-button {
-    position: absolute;
     text-decoration: none;
     background-color: #f8c663;
     color: black;
-    opacity: .5;
+    opacity: .8;
     border: 0;
-    bottom:20px;
-    right: 20px;
     width: fit-content;
-    padding: 20px;
+    padding: .7rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 700;
@@ -159,16 +176,42 @@
     margin-right: 50px;
     position: absolute;
 }
+@media screen and (min-width: 1500px) {
+    .slick-slide > div {
+        margin: 5px 200px 15px;
+        transition: all .4s ease-in-out;
+      }
+    }
+
 @media screen and (max-width: 1250px) {
+    .project-about-div {
+        flex-direction: column-reverse;
+    }
+    .project-links {
+        justify-content: flex-start;
+    }
+    .slick-slide > div {
+        margin: 5px 75px 15px;
+        transition: all .4s ease-in-out;
+      }
     .flex-container {
         flex-direction: column;
         align-items: center;
     }
+    .img-container {
+        width: 100%;
+    }
+    .project-card-upper {
+        flex-direction: column;
+    }
 }
 @media  screen and (max-width: 1050px) {
-  
+
+    .slick-slide > div {
+        margin: 5px 50px 15px;
+        transition: all .4s ease-in-out;
+      }
     .repo-button {
-        padding: 12px;
         font-weight: 500;
         letter-spacing: normal;
     }
@@ -176,6 +219,12 @@
         width: 100%;
     }
 }
+@media  screen and (max-width: 750px) {
+    .project-links {
+        justify-content: center;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .slick-list {
          margin: 10px -10px 70px;

@@ -28,19 +28,23 @@ function Contact() {
                                 <span>
                                     <a 
                                     href="https://github.com/ncortes04"
+                                    rel="noreferrer"
                                     target='_blank'
                                     className='githubBtn'></a>
                                     <p>Github</p>
                                 </span>
                                 <span>
-                                    <a href=''
+                                    <a href='https://www.linkedin.com/in/nicholas-cortes-9912b2269/'
+                                    rel="noreferrer"
                                     target='_blank'
                                     className='linkedinBtn'></a> <p>Linked In</p>
                                 </span>
                                 <span>
                                     <a 
                                     href='https://stackoverflow.com/users/21443127/ncortes' 
-                                    target='_blank' className='stackoverflowBtn'></a>
+                                    rel="noreferrer"
+                                    target='_blank' 
+                                    className='stackoverflowBtn'></a>
                                     <p>Stack Overflow</p>
                                 </span>
                         </div>
