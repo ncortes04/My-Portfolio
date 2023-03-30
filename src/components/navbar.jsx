@@ -14,7 +14,7 @@ function NavBar(){
                 <a href={ location ? `${location}#projects` : '#projects'}>PROJECTS</a>
                 <a href={ location ? `${location}#skills` : '#skills'}>SKILLS</a>
                 <a href={ location ? `${location}#contact` : '#contact'}>CONTACT ME</a>
-                <a href='/My-Portfolio/resume'>RESUME</a>
+                <a href='/resume'>RESUME</a>
             </div>
             <div className='nav-link-div'>
                 <a 
