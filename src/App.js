@@ -2,7 +2,7 @@ import './App.css';
 import NavBar from './components/navbar';
 import  Homepage from '../src/components/hompage'
 import Resume from './components/Resume';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ScrollProvider } from './provider/contextProvider';
 function App() {
   return (
@@ -10,12 +10,12 @@ function App() {
       <ScrollProvider>
          <NavBar/>
       </ScrollProvider>
-        <Router>
+        <BrowserRouter basename='/My-Portfolio'>
             <Routes>
-              <Route path='/My-Portfolio' element={<Homepage/>}/>
-              <Route path='/My-Portfolio/resume' element={<Resume />}/>
+              <Route exact path='/My-Portfolio' element={<Homepage/>}/>
+              <Route path='/resume' element={<Resume />}/>
             </Routes>
-         </Router>
+         </BrowserRouter>
     </div>
   );
 }
