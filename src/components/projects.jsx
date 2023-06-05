@@ -8,7 +8,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../styles/projects.css'
 const Projects = () => {
-    const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const images = [
     {img: techblog,
     description: 'A full stack Blog application with user authentication and authorization. This project allows users to communicate about tech. Users can view other profiles, create comments, delete comments, view their own profile, create posts, and delete posts.',

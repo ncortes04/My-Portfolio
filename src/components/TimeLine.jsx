@@ -1,0 +1,125 @@
+import React, {useEffect, useRef, useState} from 'react';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+import UWlogo from '../assets/UW-logo.svg'
+import '../styles/timeline.css'
+
+function MyTimeline({ experience }) {
+  return (
+      <VerticalTimelineElement
+        className="vertical-timeline-element"
+        contentStyle={{background: "#1d1836",color: "#fff",}}        
+        contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+        date={experience.date}
+        iconStyle={{ background: 'white' }}
+        icon={
+        <div className='timeline-icon'>
+        <img
+          src={experience.icon}
+          alt={experience.company}
+        />
+        </div>
+      }
+      >
+        <div className='event-card'>
+            <h3 className='event-title'>{experience.title}</h3>
+            <p
+            className='event-secondary'
+            style={{ margin: 0 }}
+            >
+            {experience.company}
+            </p>
+      </div>
+
+      <ul className='experience-ul'>
+      {experience.points.map((point, index) => (
+          <li
+            key={`experience-point-${index}`}
+          >
+            {point}
+          </li>
+        ))}
+      </ul>
+      </VerticalTimelineElement>
+  );
+}
+
+
+const TimeLine = () => {
+    const timelineRef = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) {
+            setIsVisible(true);
+            observer.unobserve(timelineRef.current);
+          }
+        },
+        { threshold: 0.2 }
+      );
+  
+      observer.observe(timelineRef.current);
+    }, []);
+  
+    const events = [
+        {
+            title: "Web Development Bootcamp",
+            company: 'UW Trillium',
+            date: 'Aug 2022 - Jan 2023',
+            icon: UWlogo,
+            points: [ 
+              'I started the bootcamp and learned the fundamentals of web development, gradually expanding my knowledge.',
+              'I learned the best modern practices and gained experience using a variety of different applications and tools.',
+              'This bootcamp equipped me to create applications using many different libraries, tools, and databases.'
+            ]
+          },
+          {
+            title: "Practice",
+            company: 'Trillium',
+            date: 'Jan 2023 - May 2023',
+            icon: UWlogo,
+            points: [
+              'I began reading books such as "Cracking the Coding Interview" and developed a strong interest in computer science. I spent countless hours studying and practicing algorithms.',
+
+              'I have currently solved over 150 LeetCode questions and gained an understanding of the importance of space complexity optimization as well as time complexity optimization.',
+
+              'Once I believed I had acquired the necessary computer science knowledge, I started creating projects to demonstrate my skills.'
+            ]
+          },
+        {
+          title: "Job Hunt",
+          date: 'Jul 2023 - Present',
+          company: 'Job Hunt',
+          icon: UWlogo,
+          points: [
+            'I believe i am currently equiped with attequite knowledge of creating a fast and responsive web applications.',
+            'I am currently looking for jobs that i can not only grow as a coder but use my current skills to create applications',
+          ]
+        },
+      ];
+  return (
+    <div className='timeline-parent'>
+        <div className='timeline-container'>
+                <div className={`timeline-header-container ${isVisible ? 'slide-in' : ''}`} ref={timelineRef}>
+                    <p className='header-intro m-0'>HERES WHAT I HAVE BEEN UP TO</p>
+                    <h2 className='timeline-header'>My Timeline.</h2>
+                </div>
+                <VerticalTimeline>
+                    {events.map((experience, index) => (
+                        <MyTimeline
+                        key={`experience-${index}`}
+                        experience={experience}
+                        />
+                    ))}
+                </VerticalTimeline>                
+                </div>
+                <div className='right-events'>
+
+                </div>
+        </div>
+  )
+}
+
+export default TimeLine

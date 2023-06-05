@@ -1,10 +1,7 @@
 .aboutme-container {
-  background: #fafafa;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.3);;
 }
 .aboutme-body {
   display: flex;
@@ -16,7 +13,7 @@
   display: inline-block;
   border-radius: 25%;
   padding: 10px;
-  background: #fbb72c;
+  background: #5cf1f1;
   box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
@@ -38,9 +35,11 @@
   }
 .aboutme-title-div {
   display: flex;
+  box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.3);;
+  padding: 10px;
   align-items: center;
-  position: relative;
-  width: 70%;
+  background-color:#fafafa;
+  width: 100%;
   flex-direction: column;
   margin-bottom: 30px;
 }
@@ -52,17 +51,17 @@
   margin-bottom: 5px;
 }
 
-.aboutme-title-div::after {
+.aboutme-title::after {
   content: '';
   position: absolute;
   bottom:0;
-  width: 10%;
-  height: 10px;
+  width: 100px;
+  height: 7px;
   border-radius: 50px;
   left: 50%;
   bottom: -20px;
   transform: translate(-50%); 
-  background: #fbb72c;
+  background: #5cf1f1;
 }
 .aboutme-title {
     padding: 0;
@@ -73,6 +72,7 @@
     text-transform: uppercase;
     max-width: 200px;
     color: #181717;
+    position: relative;
 }
 
 .description-intro {
@@ -81,13 +81,12 @@
   font-family: "Open Sans", Sans-serif;;
   font-weight: 700;
   display: flex;
-  color: #181717;
   flex-direction: column;
   text-align: left;
 }
 .aboutme-description {
   font-size: 20px;
-  color: #666;
+  color: white;
   max-width: 60rem;
   line-height: 1.7;
   margin: 0;
@@ -113,7 +112,6 @@
   white-space: nowrap;
   text-transform: uppercase;
   max-width: 200px;
-  color: #181717;
 }
 
 .skills-flex {
@@ -125,26 +123,49 @@
 .skill-card {
   padding: 12px;
   border-radius: 10px;
-  background-color: rgba(105, 109, 110, 0.199);
+  background-color: #122b39c3;
+  color: #5cf1f1;
   font-weight: 600;
 }
 .contact-btn {
-  background-color: #f8c663;
+  background-color: transparent;
+  border: 2px solid #5cf1f1;
+  display: flex;
+  position: relative;
+  padding: 10px 20px 10px 20px;
   width: fit-content;
-  padding: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   font-weight: 700;
-  text-decoration: none;
-  border-radius: 5px;
-  color: black;
-  box-shadow: 0 5px 15px 3px rgba(0, 0, 0, 0.233);
-  transition: transform .3s ease-in;
+  font-size: 20px;
   cursor: pointer;
 }
-.contact-btn:hover {
-  transform: translateY(-3px);
+.contact-btn a{
+  text-decoration: none;
+  color: #5cf1f1;
+  margin-right: 40px;
+;
 }
+.about-body-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.about-body-left.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about-body-right {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.about-body-right.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 @media screen and (max-width: 850px) {
 /* ABOUT ME */
 .aboutme-container {
@@ -168,6 +189,21 @@
   width: 100%;
 }
 
+}
+.contact-btn:hover .arrow-icon {
+  animation: moveRightAndBack 1.5s infinite;
+}
+
+@keyframes moveRightAndBack {
+  0% {
+    right: 0;
+  }
+  50% {
+    right: 15px;
+  }
+  100% {
+    right: 0;
+  }
 }
 @media screen and (max-width:500px) {
   .aboutme-title-div {

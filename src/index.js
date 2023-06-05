@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { HashRouter as Router } from 'react-router-dom';
+import "@fontsource/plus-jakarta-sans"
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
