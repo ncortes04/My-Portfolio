@@ -34,14 +34,9 @@
   box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
   }
 .aboutme-title-div {
-  display: flex;
-  box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.3);;
   padding: 10px;
   align-items: center;
-  background-color:#fafafa;
-  width: 100%;
-  flex-direction: column;
-  margin-bottom: 30px;
+  width: 90%;
 }
 .abouttitle-description {
   font-size: 20px;
@@ -114,7 +109,7 @@
   max-width: 200px;
 }
 
-.skills-flex {
+.about-skills-flex {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;

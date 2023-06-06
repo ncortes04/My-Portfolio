@@ -7,15 +7,55 @@ import githubsvg from '../assets/icons8-git.svg'
 import mongosvg from '../assets/icons8-mongodb.svg'
 import mysqlsvg from '../assets/icons8-my-sql.svg'
 import reactsvg from '../assets/logo192.png'
+import bootstrapsvg from '../assets/bootstrap-5-1.svg'
+import vscodesvg from '../assets/Visual_Studio_Code_1.35_icon.svg'
+import { useInView } from 'react-intersection-observer';
+
 
 import '../styles/skills.css'
+const Skill = ({ logo, index }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2
+  });
 
+  useEffect(() => {
+    if (inView) {
+      setIsVisible(true);
+    }
+  }, [inView]);
+
+  return (
+    <div
+      ref={ref}
+      className={`single-skill-container ${isVisible ? 'visible' : ''}`}
+      style={{ transitionDelay: `${index * 0.2}s` }}
+    >
+      <object data={logo.image} width="120" style={{ filter: 'grayscale(100%)' }} />
+      <p className="header-description m-0">{logo.name}</p>
+    </div>
+  );
+};
 function Skills() {
   const containerRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
+  const logos = [
+    { image: javascript, name: 'JavaScript' },
+    { image: htmlsvg, name: 'HTML' },
+    { image: csssvg, name: 'CSS' },
+    { image: nodesvg, name: 'Node' },
+    { image: githubsvg, name: 'GitHub' },
+    { image: mongosvg, name: 'MongoDB' },
+    { image: mysqlsvg, name: 'MySQL' },
+    { image: reactsvg, name: 'React' },
+    { image: bootstrapsvg, name: 'BootStrap' },
+    { image: vscodesvg, name: 'VS Code' }
 
-  useEffect(() => {
+
+  ];
+    useEffect(() => {
     if (containerRef.current) {
       const observer = new IntersectionObserver(
         (entries) => {
@@ -81,63 +121,31 @@ function Skills() {
       <div className="skills-container">
         <a id="skills" className="link-tag"></a>
         <div className="skills-title-container">
-          <h2 className="skills-title">
-            Heres Some Of My Skills</h2>
+          <h3 className="header-intro m-0">
+            Heres some things im good at
+          </h3>
+          <h2 className="timeline-header m-0">
+              My Skills
+          </h2>
+          <p className="header-description">
+            These are the languages I have picked up and learned throughout my journey. I have created over 28 projects, ranging from small weather apps to medium-sized full-stack applications.
+          </p>
         </div>
         <div className={`skills-animate ${hasAnimated ? 'visible' : ''}`} ref={containerRef}>
-          <div className="skills-flex-container">
-            <div className="card-container">
-              <div className="logo-container">
-                <object data={javascript} width="70" />
-              </div>
-              <p className="card-header">Vanilla JavaScript</p>
-              <p className="card-description">JavaScript is my primary coding language. I have worked with JavaScript for over a year now and have a solid understanding of its key concepts. I have coded over 20 projects using JavaScript and enjoy every aspect of it.</p>
-            </div>
-            <div className="card-container">
-              <div className="logo-container">
-                <object data={htmlsvg} width="70" />
-                <object data={csssvg} width="70" />
-              </div>
-              <p className="card-header">HTML & CSS</p>
-              <p className="card-description">I have been working with HTML and CSS for over a year. I have a solid understanding of how CSS and HTML work hand in hand to create the front end.</p>
-            </div>
-            <div className="card-container">
-              <div className="logo-container">
-                <object data={reactsvg} width="70" />
-              </div>
-              <p className="card-header">React</p>
-              <p className="card-description">I have been working with React for about 5 months. React is my favorite framework due to its JavaScript friendliness, speed, and ease of understanding. I have a solid understanding of the fundamental React features.</p>
-            </div>
-            <div className="card-container">
-              <div className="logo-container">
-                <object data={nodesvg} width="70" />
-              </div>
-              <p className="card-header">Node.js</p>
-              <p className="card-description">I have used Node.js for my entire coding journey. I have used Node to create all my JavaScript projects. I have a solid understanding of how Node works and how it communicates with code.</p>
-            </div>
-            <div className="card-container">
-              <div className="logo-container">
-                <object data={githubsvg} width="70" />
-              </div>
-              <p className="card-header">GitHub</p>
-              <p className="card-description">I have been using GitHub since I started coding. GitHub has been my primary way of sharing code with my fellow peers. I was taught how to use GitHub effectively to continuously integrate features as a team. I have used GitHub to share multiple projects with my peers and generate applications.</p>
-            </div>
-            <div className="card-container">
-              <div className="logo-container">
-                <object data={mongosvg} width="70" />
-                <object data={mysqlsvg} width="70" />
-              </div>
-              <p className="card-header">MongoDB, MySQL</p>
-              <p className="card-description">I have been working with MongoDB for 6 months. I have a slightly better understanding of MongoDB and i use tend to side with it more. I chose MongoDB more often due to its non-relational aspects and how small my projects were.</p>
-            </div>
-            <div className="card-container">
-              <div className="logo-container">
-                <object data={mysqlsvg} width="70" />
-              </div>
-              <p className="card-header">MySQL</p>
-              <p className="card-description">I have been working with MySQL for about 9 months now and have built a few projects with it. I have really grown to like MySQL because of how useful some of its features are. A relational database makes more sense to me when it comes to creating a medium sized application. </p>
-            </div>
-          </div>
+        <div className="skills-flex-container">
+      <div className="skills-container">
+        <div className="skills-flex">
+          {logos.slice(0, 4).map((logo, index) => (
+            <Skill key={logo.name} logo={logo} index={index} />
+          ))}
+        </div>
+        <div className="skills-flex">
+          {logos.slice(4).map((logo, index) => (
+            <Skill key={logo.name} logo={logo} index={index} />
+          ))}
+        </div>
+      </div>
+    </div>
           <div className="bargraph-container">
             <div className="bar">
               <div className="label">

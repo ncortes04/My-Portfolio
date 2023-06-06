@@ -10,7 +10,7 @@ function NavBar(){
             <a className='h1-link' href='/My-Portfolio' ><h1 className='nav-header'>CREATIVE DESIGN</h1></a> 
              <div className='middle-nav-div'>
                 <Link to='/#aboutme'>ABOUT ME</Link>
-                <Link to='/projects' >PROJECTS</Link>
+                <Link to='/#projects' >PROJECTS</Link>
                 <Link to='/#skills' >SKILLS</Link>
                 <Link to='/#contact'>CONTACT ME</Link>
                 <Link to='/resume'>RESUME</Link>

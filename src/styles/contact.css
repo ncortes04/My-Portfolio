@@ -3,14 +3,11 @@
     padding-bottom: 50px;
     flex-direction: column;
     align-items: center;
-    box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.3);;
-    background: #fafafa;
 }
 .contactme-title-div {
     display: flex;
-    align-items: center;
-    position: relative;
-    width: 70%;
+    align-items: flex-start;
+    width: 90%;
     flex-direction: column;
     margin-bottom: 30px;
   }
@@ -22,18 +19,6 @@
     margin-bottom: 5px;
   }
   
-  .contactme-title-div::after {
-    content: '';
-    position: absolute;
-    bottom:0;
-    width: 10%;
-    height: 10px;
-    border-radius: 50px;
-    left: 50%;
-    bottom: -20px;
-    transform: translate(-50%); 
-    background: #fbb72c;
-  }
   .contactme-title {
       padding: 0;
       font-size: 40px;
@@ -49,11 +34,12 @@
   }
   .contact-link-title {
     text-transform: uppercase;
-    text-shadow: none;
+    color: #727f93;
+    font-size: 26px;
+    font-weight: 600;
+    margin: 0;
   }
   .contactme-links-div {
-    background-color: #f8c663;
-    box-shadow: 0 0 15px 3px rgba(128, 128, 128, 0.432);
     padding: 30px;
     display: flex;
     border-radius: 30px;
@@ -71,6 +57,7 @@
 .contact-information {
   width: 100%;
   display: flex;
+  color: #f6f3f7;
   justify-content: space-between;
 }
   .contactme-left {
@@ -84,11 +71,9 @@
     text-align: start;
   }
   .contactme-links-div label {
-    font-weight: 700;
-    font-size: 22px;
-    font-family: Sans-Serif;
-    text-transform: uppercase;
-    color: rgb(98, 96, 96);
+    color: #727f93;
+    font-size: 20px;
+    font-weight: 600;
     margin: 0;
   }
 

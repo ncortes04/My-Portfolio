@@ -1,8 +1,11 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import Slider from 'react-slick';
-import shoppingAvail from'../assets/projects/shoppingavail.png'
-import techblog from '../assets/projects/techblog.png'
-import cannabinode from '../assets/projects/cannabinode.png'
+import shoppay from'../assets/macbook-shop-pay.png'
+import cannabinode from '../assets/macbook-cannabinode.png'
+import carrental from '../assets/macbook-carrental.png'
+import techys from '../assets/macbook-techy.png'
+import arrow from "../assets/right-arrow-svgrepo-com.svg";
+
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -10,24 +13,39 @@ import '../styles/projects.css'
 const Projects = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const images = [
-    {img: techblog,
-    description: 'A full stack Blog application with user authentication and authorization. This project allows users to communicate about tech. Users can view other profiles, create comments, delete comments, view their own profile, create posts, and delete posts.',
-    properties: 'This application was created with express, node and react. When a user makes a request, their token is passed and decrypted to identify them. This application uses custom middleware to ensure the user has access to only their things.',
-    stack: 'This application uses the SERN stack. I chose this stack because of its relational architechture. This application has multiple tables that reference another. Users have posts, posts have comments, comments have users ect. The relational aspect of MySQL made the most sense',
-    technologies: ['React', 'Express', 'MySQL', 'JWT' ],
-    link: 'https://github.com/ncortes04/Tech-Blog',
-  },  {img: shoppingAvail,
-    description: 'A full stack E-commerce application with user authentication and authorization. This is a rather simplistic project that focused more on my ability to not only authenticate users but authorize them. This projects uses middleware and conditional statements to ensure the user has access to admin role page. The admin role allows the user to create posts, and categories.',
-    properties: 'This application was created with express, node and react. When a user submits a request it is passed to the server and handled with my controllers then routed with the routes folder. This application uses custom middleware to check if the user has certain permissions.',
-    stack: 'This application uses the MERN stack. I chose this stack because of its lightweight and easy to read architechture. This application only uses three collections. With very few collections referencing eachother, it made more sense using a non relational database',
-    technologies: ['React', 'Express', 'MongoDB', 'JWT', ],
+    {
+      img: carrental,
+      title: 'Rental-Car',
+      description: 'A Full Stack web application with user authentication and authorization. This application allows users to rent cars that are available. This website is fully functional with a search feature, likes, recent, popular, leave a comment and review, a functional booked days calendar, checkout, and an admin page. This app displays my ability to comprehensively create a beautiful front and back end that is efficient and easy to manage.',
+      technologies: ['React', 'Express', 'MySQL', 'JWT', 'Redux', 'Node.js', 'Bcrypt'],
+      type: 'CAR-RENTAL APPLICATION',
+      link: 'https://github.com/ncortes04/Tech-Blog',
+    },
+     {img: shoppay,
+    title: 'Shop-Pay',
+    description: "Shop-Pay is a full-stack website that offers a convenient platform for purchasing products. This application includes user authentication, authorization, reviews, hot trends, featured products, best sellers, and checkout. The application calculates analytics based on models and routes created on the server. It also showcases my ability to quickly develop applications using Bootstrap.",
+    technologies: ['React', 'Express', 'MongoDB', 'JWT', 'Redux' ],
+    brief: 'Online Store For Purchasing Products',
+    type: 'E-COMMERCE APPLICATION',
     link: 'https://github.com/ncortes04/shopping-avail',
   },
+  {img: techys,
+    title: 'Techy',
+    description: "A full stack Blog application with user authentication and authorization. This project allows users to communicate about tech. Users can comment, view others profiles, create comments, delete comments, view their own profile, create posts, and delete posts.",
+    contribution: 'This was a collaborative project in which me and 3 other classmates were assigned. We started with an idea and turned it into an application. I was in charge of the front end and helped with the back end. I created the models for Redux and handled the filtering and display of the product',
+    technologies: ['React', 'Express', 'MongoDB', 'JWT', 'Sequelize'],
+    brief: 'Online Blog For Tech News',
+    type: "BLOG APPLICATION",
+    link: 'https://github.com/ncortes04/cannabinode',
+  },
   {img: cannabinode,
+    title: 'Shop-Pay',
     description: 'A full stack E-commerce application with user authentication. This project is an online dispensary website with stripe. Users can browse the catalog and add products to their cart. A user can filter what they are looking for and checkout.',
     contribution: 'This was a collaborative project in which me and 3 other classmates were assigned. We started with an idea and turned it into an application. I was in charge of the front end and helped with the back end. I created the models for Redux and handled the filtering and display of the product',
     stack: 'This application uses the MERN stack. We chose this stack because of it was the most familiar to us at the time. There was only a few collections being used so i believe Mongo was a great choice',
     technologies: ['React', 'Express', 'MongoDB', 'JWT', 'GraphQl'],
+    brief: 'Online Store For Selling Cannabis',
+    type: "E-commerce",
     link: 'https://github.com/ncortes04/cannabinode',
   }
   ];
@@ -62,42 +80,41 @@ const Projects = () => {
     <div key={index}>
       <div className='flex-container'>
         <div className='project-card-upper'>
-            <div className='img-container'>
-            <img className='card-img' src={card.img} loading="lazy" alt='project demonstration'></img>
-          
-          </div>
-          <div className='project-about-div'>
+          <div className={`project-about-div ${currentSlide === index ? '' : currentSlide === index + 1 ?'animate-prev' : 'animate-next'}`}>
             <div>
-              <h3>ABOUT THIS PROJECT</h3>
-              <p>{card.description}</p>
+              <h3 className='project-type'>{card.type}</h3>
+              <h2 className='project-title light'>{card.title}</h2>
+              <p className='project-brief light'>{card.brief}</p>
+              <p className='project-brief dark'><b>Technologies Used</b></p>
+              <div className='tech-flex'>
+                {card.technologies.map(tech => {
+                    return(
+                      <span className='tech-card' key={tech}>
+                      {tech}
+                      </span>
+                    )
+                  })}
+              </div>
+              <p className='project-description'>{card.description}</p>
             </div>
-              <div className='project-links'>
+            <div className='project-links'>
+            <div className="contact-btn">
               <a 
                 href={card.link}
-                rel="noreferrer"
-                target="_blank"
-                className='repo-button'>
-                Source Code
-              </a> 
-              
-              </div>   
+                target='none'
+              >Source Code</a>
+                <img src={arrow} alt="Arrow" className="arrow-icon" />
+              </div>
+            </div>
           </div>
-          </div>
-        <div className='text-container'>
-         {card.properties ? <h3>How It Works </h3> : <h3>My Contribution</h3>}
-         {card.properties ? <p>{card.properties}</p> : <p>{card.contribution}</p>}
-          <h3>Tech Stack</h3>
-          <p>{card.stack}</p>
-          <h3>TECHNOLOGIES</h3>
-          <div className='technologies-flex'>
-            {card.technologies.map(item => {
-              return(<div className='technologies-card'><p>{item}</p></div>)
-            })}
+          <div className={`img-container ${currentSlide === index ? '' : currentSlide === index + 1 ?'animate-prev' : 'animate-next'}`}>
+            <img className='card-img' src={card.img} loading="lazy" alt='project demonstration'></img>
           </div>
         </div>
       </div>
     </div>
   ));
+
   const sliderRef = useRef(null);
 
   const handlePrevClick = async () => {
@@ -112,40 +129,57 @@ const Projects = () => {
   const handleSlideChange = (oldIndex, newIndex) => {
     setCurrentSlide(newIndex);
   };
-  console.log(currentSlide)
-  
+  const [isVisible, setIsVisible] = useState(false);
+  const componentRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entries[0].target);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(componentRef.current);
+  }, []);
 return (
-  <div className='projects-parent-container'>
-    <span id="projects" className='link-tag'></span>
-    <div className='project-header-div'>
-     <div className='project-title-div'>
-          <h3 className='project-title'>Projects</h3>
-          <p className='project-description'>Heres 3 of my 30 projects. These projects were created during my time in my coding bootcamp and some were personal projects. I believe these projects demonstrate my knowledge of relevent frameworks, languages, and technologies.</p>
-    </div>
-    </div>
-    <div className='projects-carousel'>
-      <Slider beforeChange={handleSlideChange} ref={sliderRef} {...setting} dots={true}>{renderSlides()}</Slider>
-    </div>
-    <div className='carousel-button-container'>
-        <p className='current-slide-index'>
-          <span className='current-number'>0{currentSlide + 1} </span>
-          <span className='limit-number'>/ 0{images.length}</span></p>
-       <button 
-        className='arrowbuttons' 
-        type='button'
-        onClick={handlePrevClick} 
-        disabled={currentSlide === 0}>
-          <span>&#8249;</span>
-        </button>
-       <button 
-        className='arrowbuttons' 
-        type='button'
-        onClick={handleNextClick} 
-        disabled={currentSlide === images.length -1}>
-          <span>&#8250;</span>
-        </button>
+  <div className={`projects-parent-container ${isVisible ? 'animate-fade-in' : ''}`} ref={componentRef}>
+  <span id="projects" className='link-tag'></span>
+  <div className='project-header-div'>
+    <div className='project-title-div'>
+      <p className='header-intro m-0'>Heres 4 of my 28 projects</p>
+      <h3 className='timeline-header'>My Projects.</h3>
     </div>
   </div>
+  <div className='projects-carousel'>
+    <Slider beforeChange={handleSlideChange} ref={sliderRef} {...setting} dots={true}>
+      {renderSlides()}
+    </Slider>
+  </div>
+  <div className='carousel-button-container'>
+    <p className='current-slide-index'>
+      <span className='current-number'>0{currentSlide + 1} </span>
+      <span className='limit-number'>/ 0{images.length}</span>
+    </p>
+    <button
+      className='arrowbuttons'
+      type='button'
+      onClick={handlePrevClick}
+      disabled={currentSlide === 0}>
+      <span>&#8249;</span>
+    </button>
+    <button
+      className='arrowbuttons'
+      type='button'
+      onClick={handleNextClick}
+      disabled={currentSlide === images.length - 1}>
+      <span>&#8250;</span>
+    </button>
+  </div>
+</div>
 );
 };
 

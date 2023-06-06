@@ -6,10 +6,8 @@ function Contact() {
         <div className="contact-container">
             <a id="contact"></a>
              <div className='contactme-title-div'>
-                    <h2 className='contactme-title'>Contact Me</h2>
-                    <p className='contactme-description'>
-                        Here's a few ways you can contact me
-                    </p>
+                    <h3 className='header-intro m-0'>Here's a few ways you can contact me</h3>
+                    <h2 className="timeline-header m-0">Contact Me</h2>
              </div>
              <div className="contactme-links-div">
                 <div className="contact-link-title-div">

@@ -28,9 +28,8 @@ function AboutMe() {
     <div className="aboutme-container">
       <a id="aboutme" className="link-tag"></a>
       <div className="aboutme-title-div">
-        <h3 className="aboutme-title">About Me</h3>
-        <p className="abouttitle-description">Here you will find insight on who I am, as well as other skills I have.
-        I have a solid understanding of these technologies and how to use them; however, I would still categorize myself as having a basic understanding.</p>
+        <h3 className="header-intro m-0">Heres a lttle about myself</h3>
+        <h2 className="timeline-header m-0">About Me</h2>
       </div>
       <div className="aboutme-body">
         <div
@@ -68,7 +67,7 @@ function AboutMe() {
           </div>
           <div className="about-right-bottom">
             <h3 className="skills-header light">Additional Skills</h3>
-            <div className="skills-flex">
+            <div className="about-skills-flex">
               <div className="skill-card">EXPRESS</div>
               <div className="skill-card">REDUX</div>
               <div className="skill-card">MONGOOSE</div>
@@ -79,6 +78,7 @@ function AboutMe() {
               <div className="skill-card">GRAPHQL</div>
               <div className="skill-card">PWAS</div>
               <div className="skill-card">REST API'S</div>
+              <div className="skill-card">BOOTSTRAP</div>
             </div>
           </div>
         </div>

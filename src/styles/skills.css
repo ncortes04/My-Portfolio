@@ -5,6 +5,14 @@
     align-items: center;
     padding: 10px;
 }
+.single-skill-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} 
+.text-light {
+
+}
 .skills-title {
     font-size: 45px;
     margin: 0;
@@ -12,31 +20,34 @@
     color: #727f93;
 }
 .skills-title-container{
-    width: 100%;
-    background-color: white;
-    box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.3);;
+    width: 90%;
 }
 .skills-flex-container {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
+    width: 100%;
     justify-content: center;
-    max-width: 1100px;
     gap: 15px;
     padding: 20px;
     position: relative;
 }
-.skills-title::after {
-    content: '';
-    position: absolute;
-    bottom:0;
-    width: 10%;
-    height: 7px;
-    border-radius: 50px;
-    left: 50%;
-    bottom: 50px;
-    transform: translate(-50%); 
-    background: #5cf1f1;
+.single-skill-container {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.single-skill-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skills-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 20px;
 }
 .card-container {
     flex: 0 0 calc(30% - 20px);
@@ -50,6 +61,7 @@
 }
 .skills-animate {
     display: flex;
+    flex-direction: column;
     width: 100%;
     opacity: 0;
 }
@@ -69,33 +81,37 @@ color: white;
     align-self: flex-start;
     display: flex;
     align-items: center;
-    width: 65px;
+    width: 150px;
     justify-content: center;
-    padding: 0 10px 0 10px;
+    height: 100%;
     border-right: 2px solid ;
-    box-shadow: 2px 0 20px 10px rgb(0, 0, 0);
+}
+.label p {
+  padding: 0;
+  margin: 0;
+  font-size: 25px;
+  color: white;
 }
 .percentage {
 height: 100%;
 display: flex;
 align-items: center;
 }
-  .percentage-value {
-    background-color: #5cf1f1;
-    height: 80%;
-    border-radius: 0 10px 10px 0px;
-    margin-right: 20px;
+.percentage-value {
+  background-color: #5cf1f1;
+  height: 80%;
+  border-radius: 0 10px 10px 0px;
+  margin-right: 20px;
 }
 .bargraph-container {
-    width: 100%;
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-    background-color: #54555570;
-    border-radius: 5px;
-    height: fit-content;
-    padding: 20px;
-    margin-top: 20px;
+  width: 80%;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  border-radius: 5px;
+  height: fit-content;
+  padding: 20px;
+  margin-top: 20px;
 }
 .card-header {
     font-weight: 650;
