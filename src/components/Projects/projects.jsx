@@ -41,7 +41,7 @@ const Projects = () => {
     link: 'https://github.com/ncortes04/tech-blog',
   },
   {img: cannabinode,
-    title: 'Shop-Pay',
+    title: 'Cannabinode',
     description: 'Cannabinode is a website that allows the user to view and purchase marijuana products. The home page contains all of the inventory. The user also has the option to click on an individual item to view more information about that particular item. This project uses the MERN stack along with GraphQL and Stripe. This was a collaborative project in which me and 3 other classmates were assigned.',
     technologies: ['React', 'Express', 'MongoDB', 'JWT', 'GraphQl', 'Stripe', 'Node.JS', 'REDUX','Bcrypt'],
     brief: 'Online Store For Selling Cannabis',
