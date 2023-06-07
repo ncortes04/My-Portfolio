@@ -3,6 +3,7 @@ import myself from '../assets/myself.webp';
 import arrow from "../assets/right-arrow-svgrepo-com.svg";
 import '../styles/aboutme.css';
 import { HashLink as Link} from 'react-router-hash-link';
+import LazyLoad from 'react-lazyload';
 
 function AboutMe() {
   const leftRef = useRef(null);
@@ -62,7 +63,9 @@ function AboutMe() {
         >
           <div className="about-right-top">
             <div className="image-container">
-              <img src={myself} alt="picture of myself" />
+              <LazyLoad>
+              <img src={myself} alt="Picture of Myself" />
+            </LazyLoad>
             </div>
           </div>
           <div className="about-right-bottom">

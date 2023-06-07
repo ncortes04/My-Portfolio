@@ -3,12 +3,17 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import UWlogo from '../assets/UW-logo.svg'
 import '../styles/timeline.css'
+import leetcodesvg from '../assets/Leetcode.svg' 
+import linkedinsvg from '../assets/linkedin-color.svg'
 
 function MyTimeline({ experience }) {
   return (
       <VerticalTimelineElement
         className="vertical-timeline-element"
-        contentStyle={{background: "#1d1836",color: "#fff",}}        
+        contentStyle={{  
+        boxShadow: 'inset 0 1px 0 0 rgba(148,163,184,0.1)',
+        backgroundColor: 'rgba(148,163,184,0.1)',
+        color: '#fff',}}        
         contentArrowStyle={{ borderRight: "7px solid  #232631" }}
         date={experience.date}
         iconStyle={{ background: 'white' }}
@@ -66,7 +71,7 @@ const TimeLine = () => {
     const events = [
         {
             title: "Web Development Bootcamp",
-            company: 'UW Trillium',
+            company: 'UW Trilogy',
             date: 'Aug 2022 - Jan 2023',
             icon: UWlogo,
             points: [ 
@@ -77,9 +82,9 @@ const TimeLine = () => {
           },
           {
             title: "Practice",
-            company: 'Trillium',
+            company: 'LeetCode',
             date: 'Jan 2023 - May 2023',
-            icon: UWlogo,
+            icon: leetcodesvg,
             points: [
               'I began reading books such as "Cracking the Coding Interview" and developed a strong interest in computer science. I spent countless hours studying and practicing algorithms.',
 
@@ -92,7 +97,7 @@ const TimeLine = () => {
           title: "Job Hunt",
           date: 'Jul 2023 - Present',
           company: 'Job Hunt',
-          icon: UWlogo,
+          icon: linkedinsvg,
           points: [
             'I believe i am currently equiped with attequite knowledge of creating a fast and responsive web applications.',
             'I am currently looking for jobs that i can not only grow as a coder but use my current skills to create applications',
@@ -106,14 +111,16 @@ const TimeLine = () => {
                     <p className='header-intro m-0'>HERES WHAT I HAVE BEEN UP TO</p>
                     <h2 className='timeline-header'>My Timeline.</h2>
                 </div>
+                <div className='vertical-timeline-container'>
                 <VerticalTimeline>
-                    {events.map((experience, index) => (
-                        <MyTimeline
-                        key={`experience-${index}`}
-                        experience={experience}
-                        />
-                    ))}
-                </VerticalTimeline>                
+                      {events.map((experience, index) => (
+                          <MyTimeline
+                          key={`experience-${index}`}
+                          experience={experience}
+                          />
+                      ))}
+                  </VerticalTimeline>            
+                </div>
                 </div>
                 <div className='right-events'>
 

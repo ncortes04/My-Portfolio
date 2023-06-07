@@ -39,6 +39,19 @@
     opacity: 1;
     transform: translateY(0);
   }
+  .tilted-image-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tilted-image-slide .img-container {
+    transition: transform 0.3s ease;
+  }
+
+  .tilted-image-slide .img-container:hover {
+    transform: rotate(10deg);
+  }
+  
 .project-type {
 color: #727f93;
 font-size: 20px;

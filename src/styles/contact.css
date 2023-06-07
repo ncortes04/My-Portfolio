@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
 }
+
 .contactme-title-div {
     display: flex;
     align-items: flex-start;
@@ -20,33 +21,99 @@
   }
   
   .contactme-title {
-      padding: 0;
-      font-size: 40px;
-      margin: 15px;
-      height: 40px;
-      white-space: nowrap;
-      text-transform: uppercase;
-      color: #181717;
-  }
-  .contact-link-title-div {
-    text-align: left;
-    border-right: 2px solid rgb(98, 96, 96);
-  }
-  .contact-link-title {
+    padding: 0;
+    font-size: 40px;
+    margin: 15px;
+    height: 40px;
+    white-space: nowrap;
     text-transform: uppercase;
-    color: #727f93;
-    font-size: 26px;
+    color: #181717;
+  }
+
+  .contact-link-title {
+    font-size: 24px;
     font-weight: 600;
     margin: 0;
   }
   .contactme-links-div {
-    padding: 30px;
+    padding: 20px;
     display: flex;
+    box-shadow: inset 0 1px 0 0 rgba(148,163,184,0.1);
+    background-color: rgba(148,163,184,0.1);
+    flex-direction: column;
     border-radius: 30px;
     gap: 20px;
     justify-content: center;
     width: 70%;
-    max-width: 700px;
+    max-width: 500px;
+}
+.contact-input-form form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-form {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+.contact-submit {
+  background-color: transparent;
+  border: 2px solid #5cf1f1;
+  color: #5cf1f1;
+  padding: 10px 20px 10px 20px;
+  width: fit-content;
+  font-weight: 700;
+  font-size: 20px;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+.contact-submit:hover {
+  background-color: #5cf1f1;
+  color: black;
+}
+.contact-form input {
+  background-color: rgba(148, 163, 184, 0.304);
+  border: none;
+  border-radius: 10px;
+  width: 90%;
+  padding: 15px;
+}
+input::placeholder,
+textarea::placeholder {
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.my-swal-html-container {
+    font-size: 20px !important;
+    color: white;
+    font-weight: 600 !important;
+  }
+
+.my-swal-confirm-button {
+  /* Styles for the confirm button */
+  background-color: transparent !important;
+  border: 2px solid black !important;
+  background-color: transparent;
+  border: 2px solid #5cf1f1!important;
+  color: #5cf1f1!important;
+  padding: 10px 20px 10px 20px!important;
+  font-weight: 700!important;
+  font-size: 20px!important;
+  border-radius: 0 !important;
+}
+
+
+
+.contact-form textarea {
+  background-color: rgba(148, 163, 184, 0.304);
+  border: none;
+  height: 100px;
+  border-radius: 10px;
+  width: 90%;
+  padding: 15px;
 }
 .contactme-links-div p{
     font-size: 18px;
@@ -60,36 +127,20 @@
   color: #f6f3f7;
   justify-content: space-between;
 }
-  .contactme-left {
-    width: 50%;
-    text-align: start;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .contactme-right {
-    text-align: start;
-  }
+
   .contactme-links-div label {
-    color: #727f93;
     font-size: 20px;
+    color: white;
     font-weight: 600;
-    margin: 0;
+    max-width: 60rem;
+    line-height: 1.7;
   }
 
-  .nav-link-div-contacts {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    gap: 10px;
+  .contact-left {
+    width: 50%;
   }
-  .nav-link-div-contacts span{
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    margin-right: 30px;
-    margin-left: 10px;
+  .contact-right {
+    width: 50%;
   }
   .nav-link-div-contacts span a {
     transition: all .3s ease-in-out;

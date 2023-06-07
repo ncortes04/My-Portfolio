@@ -13,30 +13,7 @@ import { useInView } from 'react-intersection-observer';
 
 
 import '../styles/skills.css'
-const Skill = ({ logo, index }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.2
-  });
-
-  useEffect(() => {
-    if (inView) {
-      setIsVisible(true);
-    }
-  }, [inView]);
-
-  return (
-    <div
-      ref={ref}
-      className={`single-skill-container ${isVisible ? 'visible' : ''}`}
-      style={{ transitionDelay: `${index * 0.2}s` }}
-    >
-      <object data={logo.image} width="120" style={{ filter: 'grayscale(100%)' }} />
-      <p className="header-description m-0">{logo.name}</p>
-    </div>
-  );
-};
+import BallCanvas from "./Ball";
 function Skills() {
   const containerRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -75,12 +52,9 @@ function Skills() {
     const container = containerRef.current;
 
     if (isVisible && !hasAnimated) {
-      // Set initial position to left of screen
       container.style.transform = 'translateX(-100%)';
-      // Set opacity to 0
       container.style.opacity = '0';
 
-      // Animate container to center of screen and opacity to 1
       container.animate(
         [
           { transform: 'translateX(-100%)', opacity: '0' },
@@ -88,7 +62,6 @@ function Skills() {
         ],
         { duration: 1500, easing: 'ease-out' }
       ).onfinish = () => {
-        // Set final position to center of screen
         container.style.transform = 'translateX(0)';
         container.style.opacity = '1';
 
@@ -97,9 +70,7 @@ function Skills() {
 
       setHasAnimated(true);
     } else if (!isVisible && hasAnimated) {
-      // Set position back to left of screen
       container.style.transform = 'translateX(-100%)';
-      // Set opacity back to 0
       container.style.opacity = '0';
 
       setHasAnimated(false);
@@ -136,81 +107,22 @@ function Skills() {
       <div className="skills-container">
         <div className="skills-flex">
           {logos.slice(0, 4).map((logo, index) => (
-            <Skill key={logo.name} logo={logo} index={index} />
+            <div className="ball-container">
+              <BallCanvas key={logo.name} logo={logo} index={index} />
+              <p className="m-0 header-description">{logo.name}</p>
+            </div>
           ))}
         </div>
         <div className="skills-flex">
           {logos.slice(4).map((logo, index) => (
-            <Skill key={logo.name} logo={logo} index={index} />
+            <div className="ball-container">
+            <BallCanvas key={logo.name} logo={logo} index={index} />
+            <p className="m-0 header-description">{logo.name}</p>
+            </div>
           ))}
         </div>
       </div>
-    </div>
-          <div className="bargraph-container">
-            <div className="bar">
-              <div className="label">
-                <p>HTML</p>
-              </div>
-              <div className="percentage" style={{ width: '60%' }}>
-                <span className="percentage-value"></span>
-                <p className="percentage-text">60%</p>
-              </div>
-            </div>
-            <div className="bar">
-              <div className="label">
-                <p>CSS</p>
-              </div>
-              <div className="percentage" style={{ width: '80%' }}>
-                <span className="percentage-value"></span>
-                <p className="percentage-text">80%</p>
-              </div>
-            </div>
-            <div className="bar">
-              <div className="label">
-                <p>React</p>
-              </div>
-              <div className="percentage" style={{ width: '60%' }}>
-                <span className="percentage-value"></span>
-                <p className="percentage-text">60%</p>
-              </div>
-            </div>
-            <div className="bar">
-              <div className="label">
-                <p>Node.js</p>
-              </div>
-              <div className="percentage" style={{ width: '50%' }}>
-                <span className="percentage-value"></span>
-                <p className="percentage-text">50%</p>
-              </div>
-            </div>
-            <div className="bar">
-              <div className="label">
-                <p>GitHub</p>
-              </div>
-              <div className="percentage" style={{ width: '60%' }}>
-                <span className="percentage-value"></span>
-                <p className="percentage-text">60%</p>
-              </div>
-            </div>
-            <div className="bar">
-              <div className="label">
-                <p>MongoDB</p>
-              </div>
-              <div className="percentage" style={{ width: '60%' }}>
-                <span className="percentage-value"></span>
-                <p className="percentage-text">60%</p>
-              </div>
-            </div>
-            <div className="bar">
-              <div className="label">
-                <p>MySQL</p>
-              </div>
-              <div className="percentage" style={{ width: '60%' }}>
-                <span className="percentage-value"></span>
-                <p className="percentage-text">60%</p>
-              </div>
-            </div>
-          </div>
+        </div>
         </div>
       </div>
     )

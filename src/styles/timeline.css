@@ -11,9 +11,11 @@
   .timeline-container {
     width: 80%;
     display: flex;
-    margin-top: 100px;
     text-align: start;
     flex-direction: column;
+  }
+  .vertical-timeline-container {
+    margin: 100px;
   }
   .timeline-header {
     align-self: flex-start;
