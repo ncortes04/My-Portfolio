@@ -19,10 +19,10 @@ function MyTimeline({ experience }) {
         iconStyle={{ background: 'white' }}
         icon={
         <div className='timeline-icon'>
-        <img
-          src={experience.icon}
-          alt={experience.company}
-        />
+          <img
+            src={experience.icon}
+            alt={experience.company}
+          />
         </div>
       }
       >

@@ -15,7 +15,8 @@
     flex-direction: column;
   }
   .vertical-timeline-container {
-    margin: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
   .timeline-header {
     align-self: flex-start;
@@ -26,13 +27,13 @@
 .timeline-header-container {
     opacity: 0;
 }
-  .timeline-icon {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.timeline-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
   .event-card {
     display: flex;
     flex-direction: column;

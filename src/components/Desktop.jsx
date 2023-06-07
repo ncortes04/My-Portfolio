@@ -18,9 +18,7 @@ const Model = ({ model }) => {
     controls.current.enableDamping = true;
     controls.current.dampingFactor = 0.05;
     controls.current.rotateSpeed = 0.5;
-    controls.current.minDistance = 15;
-    controls.current.maxDistance = 70;
-    controls.current.enableZoom = false; 
+
 
     return () => {
       controls.current.dispose();
@@ -41,14 +39,11 @@ const Model = ({ model }) => {
     let scaleFactor = 1;
     let cameraPosition = [20, 4, 4];
 
-    if (screenWidth < 500) {
+    if (screenWidth < 700) {
       scaleFactor = 0.4;
-      cameraPosition = [9, 4, 1];
+      cameraPosition = [9, 4, 0];
     } else if (screenWidth < 1200) {
       scaleFactor = 0.8;
-      cameraPosition = [20, 4, 5];
-    } else if (screenWidth < 1700) {
-      scaleFactor = 0.7;
       cameraPosition = [20, 4, 5];
     }
 
@@ -96,7 +91,7 @@ const Three = ({ model, cameraPosition, fval }) => {
   }
 
   return (
-    <Canvas camera={{ position: [20, 4, 5], fov: 30 }}>
+    <Canvas camera={{ position: [20, 4, 5], fov: 40 }}>
       <hemisphereLight intensity={0.25} groundColor="black" />
       <spotLight
         position={[-20, 50, 10]}

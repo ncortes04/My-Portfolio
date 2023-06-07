@@ -1,8 +1,9 @@
 .contact-container {
-    display: flex;
-    padding-bottom: 50px;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  min-height: 90vh;
+  padding-bottom: 50px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contactme-title-div {
@@ -11,14 +12,14 @@
     width: 90%;
     flex-direction: column;
     margin-bottom: 30px;
-  }
-  .contactme-description {
-    font-size: 20px;
-    color: #666;
-    max-width: 60rem;
-    line-height: 1.7;
-    margin-bottom: 5px;
-  }
+}
+.contactme-description {
+  font-size: 20px;
+  color: #666;
+  max-width: 60rem;
+  line-height: 1.7;
+  margin-bottom: 5px;
+}
   
   .contactme-title {
     padding: 0;
@@ -54,6 +55,7 @@
 }
 .contact-form {
   width: 70%;
+  height: 600px;
   display: flex;
   align-items: center;
 }
@@ -93,7 +95,6 @@ textarea::placeholder {
   }
 
 .my-swal-confirm-button {
-  /* Styles for the confirm button */
   background-color: transparent !important;
   border: 2px solid black !important;
   background-color: transparent;
@@ -135,12 +136,16 @@ textarea::placeholder {
     max-width: 60rem;
     line-height: 1.7;
   }
-
+  .planet-container {
+    width: 100%;
+    height: 100%;
+  }
   .contact-left {
     width: 50%;
   }
   .contact-right {
     width: 50%;
+    height: 100%;
   }
   .nav-link-div-contacts span a {
     transition: all .3s ease-in-out;
@@ -150,18 +155,35 @@ textarea::placeholder {
     opacity: 1;
     scale: .9;
   }
-  @media screen and (max-width: 850px) {
-    .contactme-links-div {
-      flex-direction: column;
+  @media screen and (max-width: 1500px) {
+      .contact-form {
+        width: 90%;
+        height: fit-content;
+      }
+      .contact-left {
+        width: 60%;
+      }
+      .contact-right {
+        width: 40%;
+      }
     }
-    .contact-link-title-div {
-      border-right: none;
-      border-bottom: 2px solid #666;
+    @media screen and (max-width: 1200px) {
+      .contact-form {
+        flex-direction: column-reverse;
+        align-self: center;
+        justify-content: center;
+      }
+      .contact-right {
+        width: 100%;
+      }
+      .contactme-links-div {
+        max-width: none;
+        width: 100%;
+      }
     }
-  }
-  @media screen and (max-width: 650px) {
-  .contact-information {
-    flex-direction: column;
-    gap: 10px;
-  }
-  }
+    @media screen and (max-width: 800px) {
+      .contact-left {
+        width: 100%;
+        display: flex;
+      }
+    }

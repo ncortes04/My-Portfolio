@@ -42,7 +42,7 @@ const Projects = () => {
   },
   {img: cannabinode,
     title: 'Shop-Pay',
-    description: 'Cannabinode is a website that allows the user to view and purchase marijuana products, much like dispensaries where marijuana is legal in the US. The home page contains all of the inventory, which can be filtered by both the type and form the marijuana comes in. The user also has the option to click on an individual item to view more information about that particular item. This project uses the MERN stack along with GraphQL and Stripe. This was a collaborative project in which me and 3 other classmates were assigned. We started with an idea and turned it into an application. I was in charge of the front end and helped with the back end. I created the models for Redux and handled the filtering and display of the product',
+    description: 'Cannabinode is a website that allows the user to view and purchase marijuana products. The home page contains all of the inventory. The user also has the option to click on an individual item to view more information about that particular item. This project uses the MERN stack along with GraphQL and Stripe. This was a collaborative project in which me and 3 other classmates were assigned.',
     technologies: ['React', 'Express', 'MongoDB', 'JWT', 'GraphQl', 'Stripe', 'Node.JS', 'REDUX','Bcrypt'],
     brief: 'Online Store For Selling Cannabis',
     type: "E-commerce",
@@ -76,45 +76,51 @@ const Projects = () => {
 
   }
   const renderSlides = () =>
-  images.map((card, index) => (
-    <div key={index}>
-      <div className='flex-container'>
-        <div className='project-card-upper'>
-          <div className={`project-about-div ${currentSlide === index ? '' : currentSlide === index + 1 ?'animate-prev' : 'animate-next'}`}>
-            <div>
-              <h3 className='project-type'>{card.type}</h3>
-              <h2 className='project-title light'>{card.title}</h2>
-              <p className='project-brief light'>{card.brief}</p>
-              <p className='project-brief dark'><b>Technologies Used</b></p>
-              <div className='tech-flex'>
-                {card.technologies.map(tech => {
-                  return (
+  images.map((card, index) => {
+    const isCurrentSlide = currentSlide === index;
+    const isPrevSlide = currentSlide === index + 1;
+    const isNextSlide = currentSlide === index - 1;
+
+    const slideClass = `project-about-div ${
+      isCurrentSlide ? '' : isPrevSlide ? 'animate-prev' : 'animate-next'
+    }`;
+
+    return (
+      <div key={index}>
+        <div className='flex-container'>
+          <div className='project-card-upper'>
+            <div className={slideClass}>
+              <div>
+                <h3 className='project-type'>{card.type}</h3>
+                <h2 className='project-title light'>{card.title}</h2>
+                <p className='project-brief light'>{card.brief}</p>
+                <p className='project-brief dark'>
+                  <b>Technologies Used</b>
+                </p>
+                <div className='tech-flex'>
+                  {card.technologies.map((tech) => (
                     <span className='tech-card' key={tech}>
                       {tech}
                     </span>
-                  );
-                })}
+                  ))}
+                </div>
+                <p className='project-description'>{card.description}</p>
               </div>
-              <p className='project-description'>{card.description}</p>
-            </div>
-            <div className='project-links'>
-              <div className="contact-btn">
-                <a 
-                  href={card.link}
-                  target='none'
-                >
-                  Source Code
-                </a>
-                <img src={arrow} alt="Arrow" className="arrow-icon" />
+              <div className='project-links'>
+                <div className='contact-btn'>
+                  <a href={card.link} target='none'>
+                    Source Code
+                  </a>
+                  <img src={arrow} alt='Arrow' className='arrow-icon' />
+                </div>
               </div>
             </div>
+            <TiltedImageSlide card={card} />
           </div>
-          <TiltedImageSlide card={card} />
         </div>
       </div>
-    </div>
-  ));
-
+    );
+  });
   const sliderRef = useRef(null);
 
   const handlePrevClick = async () => {
@@ -131,7 +137,19 @@ const Projects = () => {
   };
   const [isVisible, setIsVisible] = useState(false);
   const componentRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1250);
+    };
+
+    handleResize(); // Check initial window size
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -159,26 +177,54 @@ return (
       {renderSlides()}
     </Slider>
   </div>
-  <div className='carousel-button-container'>
-    <p className='current-slide-index'>
-      <span className='current-number'>0{currentSlide + 1} </span>
-      <span className='limit-number'>/ 0{images.length}</span>
-    </p>
-    <button
-      className='arrowbuttons'
-      type='button'
-      onClick={handlePrevClick}
-      disabled={currentSlide === 0}>
-      <span>&#8249;</span>
-    </button>
-    <button
-      className='arrowbuttons'
-      type='button'
-      onClick={handleNextClick}
-      disabled={currentSlide === images.length - 1}>
-      <span>&#8250;</span>
-    </button>
-  </div>
+    {isMobile 
+    ?(<>
+      <div className='arrow-mid-left'>
+        <button
+          className='arrowbuttons-mid'
+          type='button'
+          onClick={handlePrevClick}
+          disabled={currentSlide === 0}>
+          <span>&#8249;</span>
+        </button>
+      </div>
+      <div className='arrow-mid-right'>
+        <button
+            className='arrowbuttons-mid'
+            type='button'
+            onClick={handleNextClick}
+            disabled={currentSlide === images.length - 1}>
+            <span>&#8250;</span>
+        </button>
+      </div>
+      </>
+    ) : (
+      <>  
+        <div className='carousel-button-container'>
+            <p className='current-slide-index'>
+              <span className='current-number'>0{currentSlide + 1} </span>
+              <span className='limit-number'>/ 0{images.length}</span>
+            </p>
+            <button
+              className='arrowbuttons'
+              type='button'
+              onClick={handlePrevClick}
+              disabled={currentSlide === 0}>
+              <span>&#8249;</span>
+            </button>
+            <button
+              className='arrowbuttons'
+              type='button'
+              onClick={handleNextClick}
+              disabled={currentSlide === images.length - 1}>
+              <span>&#8250;</span>
+            </button>
+          </div>
+      </>
+    )
+  }
+  
+
 </div>
 );
 };

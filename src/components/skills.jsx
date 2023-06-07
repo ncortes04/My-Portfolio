@@ -8,6 +8,7 @@ import mongosvg from '../assets/icons8-mongodb.svg'
 import mysqlsvg from '../assets/icons8-my-sql.svg'
 import reactsvg from '../assets/logo192.png'
 import bootstrapsvg from '../assets/bootstrap-5-1.svg'
+import threeJSsvg from '../assets/Three.js_Icon.svg'
 import vscodesvg from '../assets/Visual_Studio_Code_1.35_icon.svg'
 import { useInView } from 'react-intersection-observer';
 
@@ -22,13 +23,14 @@ function Skills() {
     { image: javascript, name: 'JavaScript' },
     { image: htmlsvg, name: 'HTML' },
     { image: csssvg, name: 'CSS' },
-    { image: nodesvg, name: 'Node' },
+    { image: nodesvg, name: 'Node.JS' },
     { image: githubsvg, name: 'GitHub' },
     { image: mongosvg, name: 'MongoDB' },
     { image: mysqlsvg, name: 'MySQL' },
     { image: reactsvg, name: 'React' },
     { image: bootstrapsvg, name: 'BootStrap' },
-    { image: vscodesvg, name: 'VS Code' }
+    { image: vscodesvg, name: 'VS Code' },
+    {image: threeJSsvg, name: 'Three.JS'}
 
 
   ];
@@ -106,7 +108,7 @@ function Skills() {
         <div className="skills-flex-container">
       <div className="skills-container">
         <div className="skills-flex">
-          {logos.slice(0, 4).map((logo, index) => (
+          {logos.map((logo, index) => (
             <div className="ball-container">
               <BallCanvas key={logo.name} logo={logo} index={index} />
               <p className="m-0 header-description">{logo.name}</p>
@@ -114,12 +116,6 @@ function Skills() {
           ))}
         </div>
         <div className="skills-flex">
-          {logos.slice(4).map((logo, index) => (
-            <div className="ball-container">
-            <BallCanvas key={logo.name} logo={logo} index={index} />
-            <p className="m-0 header-description">{logo.name}</p>
-            </div>
-          ))}
         </div>
       </div>
         </div>

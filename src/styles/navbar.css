@@ -20,8 +20,8 @@
   transition: color .2s ease-out;
 }
 .nav-header:hover {
-  color:#fbb72c;
-  border-color: #fbb72c;
+  color: #5cf1f1;
+  border-color: #5cf1f1;
 }
 .active {
   background-color: black;
@@ -49,13 +49,11 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #fbb72c;
+  background-color: #5cf1f1;
   transform-origin: bottom;
   transition: transform 0.25s ease-out;
 }
-.middle-nav-div a:hover{
-scale: 1.2;
-}
+
 .middle-nav-div a:hover::after{
   transform: scaleX(1);
   transform-origin: bottom;

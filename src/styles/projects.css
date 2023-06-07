@@ -60,6 +60,7 @@ margin: 0;
 }
 .projects-carousel {
    width: 100%;
+   position: relative;
 }
 
 .slick-slide > div {
@@ -155,6 +156,34 @@ margin: 0;
 .limit-number {
     color: #ccc
 }
+.arrow-mid-left {
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+}
+.arrow-mid-right {
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+    cursor: pointer;
+}
+.arrowbuttons-mid {
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    margin: 20px;
+}
+.arrowbuttons-mid span {
+    font-size: 40px;
+    padding: 0;
+    margin: 0;
+    transform: translateY(-2px);
+}
 .carousel-button-container {
     align-self: flex-end;
     display: flex;
@@ -162,6 +191,9 @@ margin: 0;
     margin-right: 50px;
     position: absolute;
 }
+.hide-slide {
+    display: none;
+  }
 @media screen and (min-width: 1500px) {
     .slick-slide > div {
         margin: 5px 200px 15px;
@@ -170,9 +202,6 @@ margin: 0;
     }
 
 @media screen and (max-width: 1250px) {
-    .project-about-div {
-        flex-direction: column-reverse;
-    }
     .project-links {
         justify-content: flex-start;
     }
@@ -194,12 +223,17 @@ margin: 0;
 @media  screen and (max-width: 1050px) {
 
     .slick-slide > div {
-        margin: 5px 50px 15px;
+        margin: 5px 20px 15px 50px;
         transition: all .4s ease-in-out;
-      }
+    }
     .repo-button {
         font-weight: 500;
         letter-spacing: normal;
+    }
+    .arrowbuttons-mid {
+        height: 50px;
+        width: 50px;
+        margin: 5px;
     }
     .img-container img {
         width: 100%;
@@ -208,6 +242,14 @@ margin: 0;
 @media  screen and (max-width: 750px) {
     .project-links {
         justify-content: center;
+    }
+    .arrowbuttons-mid {
+        height: 40px;
+        width: 40px;
+        margin: 5px;
+    }
+    .arrowbuttons-mid span{
+        font-size: 30px;
     }
 }
 

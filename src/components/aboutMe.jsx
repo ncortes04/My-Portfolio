@@ -18,8 +18,8 @@ function AboutMe() {
           observer.unobserve(entries[0].target);
         }
       },
-      { threshold: 0.2 }
-    );
+      { threshold: 0.05 }   
+      );
 
     observer.observe(leftRef.current);
     observer.observe(rightRef.current);
@@ -53,7 +53,7 @@ function AboutMe() {
             If you have an opportunity that matches any of my skills, please feel free to contact me.
           </p>
           <div className="contact-btn">
-          <Link to='/#aboutme'>Contact Me </Link>
+          <Link to='/#contact'>Contact Me </Link>
             <img src={arrow} alt="Arrow" className="arrow-icon" />
           </div>
         </div>
