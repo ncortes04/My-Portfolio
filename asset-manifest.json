@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/My-Portfolio/static/css/main.68a6f3d1.css",
-    "main.js": "/My-Portfolio/static/js/main.8ca6b78b.js",
+    "main.css": "/My-Portfolio/static/css/main.588c52ee.css",
+    "main.js": "/My-Portfolio/static/js/main.14918a0d.js",
     "static/js/787.48fbe5ec.chunk.js": "/My-Portfolio/static/js/787.48fbe5ec.chunk.js",
     "static/media/purple_planet.glb": "/My-Portfolio/static/media/purple_planet.5693cdebfee4538e8ef7.glb",
     "static/media/gaming_desktop_pc.glb": "/My-Portfolio/static/media/gaming_desktop_pc.da9badf29c845cd4d67c.glb",
@@ -42,12 +42,12 @@
     "static/media/right-arrow-svgrepo-com.svg": "/My-Portfolio/static/media/right-arrow-svgrepo-com.4ab426e57ca0e4b074b8f8d0e6ad3caf.svg",
     "static/media/icons8-css3.svg": "/My-Portfolio/static/media/icons8-css3.64fa1d1c4801d931c3717be71f6c020e.svg",
     "static/media/icons8-html-5.svg": "/My-Portfolio/static/media/icons8-html-5.8ae3d4adcd70a1028a6377697d9f33b0.svg",
-    "main.68a6f3d1.css.map": "/My-Portfolio/static/css/main.68a6f3d1.css.map",
-    "main.8ca6b78b.js.map": "/My-Portfolio/static/js/main.8ca6b78b.js.map",
+    "main.588c52ee.css.map": "/My-Portfolio/static/css/main.588c52ee.css.map",
+    "main.14918a0d.js.map": "/My-Portfolio/static/js/main.14918a0d.js.map",
     "787.48fbe5ec.chunk.js.map": "/My-Portfolio/static/js/787.48fbe5ec.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.68a6f3d1.css",
-    "static/js/main.8ca6b78b.js"
+    "static/css/main.588c52ee.css",
+    "static/js/main.14918a0d.js"
   ]
 }
