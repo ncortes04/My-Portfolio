@@ -15,20 +15,19 @@ const CursorGlow = () => {
     };
   }, []);
 
-  const calculateHue = () => {
-    const { innerWidth, innerHeight } = window;
-    const { x, y } = cursorPosition;
-    const percentX = (x / innerWidth) * 100;
-    const percentY = (y / innerHeight) * 100;
-    const hue = Math.atan2(percentY, percentX) * (180 / Math.PI) + 180;
-    return hue;
-  };
+
   const cursorGlowStyle = {
     left: cursorPosition.x,
     top: cursorPosition.y,
     position: 'fixed',
     background: 'radial-gradient(rgba(29, 78, 216, 0.15), transparent 80%)',
-};
+  };
+
+  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    return null; // Render nothing on mobile devices
+  }
 
   return <div className="cursor-glow" style={cursorGlowStyle}></div>;
 };

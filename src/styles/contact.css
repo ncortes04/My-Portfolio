@@ -175,6 +175,10 @@ textarea::placeholder {
       }
       .contact-right {
         width: 100%;
+        height: 500px;
+      }
+      .planet-container {
+        min-height: 500px
       }
       .contactme-links-div {
         max-width: none;

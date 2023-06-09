@@ -20,13 +20,16 @@ function Header(){
                 <div className='header-flex-left' style={{ transform: `translateX(${leftDivX}%)`, transition: 'all 2s' }}>
                     <div className='header-title-div'>
                         <p className='header-intro m-0'>Hello, my name is,</p>
-                        <h2 className='m-0  nowrap'><span className='light'>Nicholas Cortes.</span><br></br>A Full Stack<br></br> Web Developer.</h2>
-                        <p className='header-description m-0'>I am a motivated full stack developer with a genuine love for coding.
-                         I enjoy working in a fast paced enviroment to challenge myself and expand my knowledge.</p>
-                         <div className='view-work-btn'>
+                        <h2 className='m-0  nowrap'><span className='light'>Nicholas Cortes.</span><br></br>A Full-Stack<br></br> Web Developer.</h2>
+                        <p className='header-description m-0'>I am a motivated full-stack developer with a genuine love for coding.
+                         I enjoy working in a fast-paced enviroment to challenge myself and expand my knowledge.</p>
+                         <a className='view-work-btn' 
+                            href='https://github.com/ncortes04'
+                            target='blank'
+                         >
                             <p className='btn-text'>View My Work</p>
                             <img src={arrow} alt='Arrow' className='arrow-icon' />
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div className='desktop-3d'>

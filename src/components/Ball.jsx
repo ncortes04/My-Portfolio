@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Decal, Float, OrbitControls, Preload, useTexture } from "@react-three/drei";
+import { isMobile } from "react-device-detect";
 
 const Sphere = (props) => {
   const [decal] = useTexture([props.imgUrl]);
@@ -10,12 +11,12 @@ const Sphere = (props) => {
     const updateScale = () => {
       const screenWidth = window.innerWidth;
 
-      if (screenWidth < 700) {
-        setScale(2);
-      } else if (screenWidth < 1200) {
-        setScale(2.2);
+      if (isMobile && screenWidth < 700) {
+        setScale(1.5); // Adjust scale for mobile devices with small screens
+      } else if (isMobile && screenWidth < 1200) {
+        setScale(2); // Adjust scale for mobile devices with medium-sized screens
       } else {
-        setScale(2.75);
+        setScale(2.75); // Default scale for desktop or large screens
       }
     };
 
@@ -49,7 +50,7 @@ const Sphere = (props) => {
 
 const BallCanvas = ({ logo }) => {
   return (
-    <Canvas frameloop="demand" dpr={[1, 2]} gl={{ preserveDrawingBuffer: true }}>
+    <Canvas frameloop="demand" dpr={isMobile ? 1 : [1, 2]} gl={{ preserveDrawingBuffer: true }}>
       <OrbitControls enableZoom={false} />
       <Sphere imgUrl={logo.image} />
       <Preload all />

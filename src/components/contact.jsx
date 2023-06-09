@@ -68,7 +68,7 @@ function Contact() {
     <div className="contact-container">
       <a id="contact"></a>
       <div className="contactme-title-div">
-        <h3 className="header-intro m-0">Here's a few ways you can contact me</h3>
+        <h3 className="header-intro m-0">Here is a few ways you can contact me</h3>
         <h2 className="timeline-header m-0">Contact Me</h2>
       </div>
       <div className="contact-form">

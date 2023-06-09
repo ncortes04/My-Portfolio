@@ -4,6 +4,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import * as THREE from 'three';
 import Loading from './Loading';
+import { isMobile } from 'react-device-detect';
 
 const Model = ({ model }) => {
   const modelGroup = useRef();
@@ -16,9 +17,8 @@ const Model = ({ model }) => {
   useEffect(() => {
     controls.current = new OrbitControls(camera, renderer);
     controls.current.enableDamping = true;
-    controls.current.dampingFactor = 0.05;
+    controls.current.dampingFactor = isMobile ? 0.1 : 0.05; // Adjust the damping factor for mobile devices
     controls.current.rotateSpeed = 0.5;
-
 
     return () => {
       controls.current.dispose();
@@ -52,7 +52,7 @@ const Model = ({ model }) => {
   };
 
   useEffect(() => {
-    updateScale(); 
+    updateScale();
 
     window.addEventListener('resize', updateScale);
 
@@ -91,7 +91,11 @@ const Three = ({ model, cameraPosition, fval }) => {
   }
 
   return (
-    <Canvas camera={{ position: [20, 4, 5], fov: 40 }}>
+    <Canvas
+      camera={{ position: [20, 4, 5], fov: 40 }}
+      pixelRatio={isMobile ? 0.8 : undefined} // Lower pixel ratio for mobile devices
+      antialias={!isMobile} // Disable anti-aliasing for mobile devices
+    >
       <hemisphereLight intensity={0.25} groundColor="black" />
       <spotLight
         position={[-20, 50, 10]}

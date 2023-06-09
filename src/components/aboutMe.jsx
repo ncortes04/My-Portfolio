@@ -29,7 +29,7 @@ function AboutMe() {
     <div className="aboutme-container">
       <a id="aboutme" className="link-tag"></a>
       <div className="aboutme-title-div">
-        <h3 className="header-intro m-0">Heres a lttle about myself</h3>
+        <h3 className="header-intro m-0">Here is a little about myself</h3>
         <h2 className="timeline-header m-0">About Me</h2>
       </div>
       <div className="aboutme-body">
@@ -39,8 +39,8 @@ function AboutMe() {
         >
           <p className="description-intro light">Get To Know Me!</p>
           <p className="aboutme-description">
-            I am a beginner web developer from Tacoma, Washington. I have recently completed the full-stack coding bootcamp from the University of Washington.
-            The coding bootcamp was a fast-paced, information-packed course that provided relevant material for modern web development.
+            I am a beginner web developer from Tacoma, Washington. I have recently completed the full-stack coding boot camp from the University of Washington.
+            The coding boot camp was a fast-paced, information-packed course that provided relevant material for modern web development.
             I spend my days reading material on web development and practicing what I learn. I have created multiple projects outside of my course material to practice and solidify my understanding of coding.
             I also spend a portion of my day studying algorithms and data structures.
           </p>
