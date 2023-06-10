@@ -18,7 +18,7 @@ const Projects = () => {
     {
       img: carrental,
       title: 'Rental-Car',
-      description: 'A Full Stack web application with user authentication and authorization. This application allows users to rent cars that are available. This website is fully functional with a search feature, likes, recent, popular, leave a comment and review, a functional booked days calendar, checkout, and an admin page. This app displays my ability to comprehensively create a beautiful front and back end that is efficient and easy to manage.',
+      description: 'A Full-Stack web application with user authentication and authorization. This application allows users to rent cars that are available. This website is fully functional with a search feature, likes, recent, popular, leave a comment and review, a functional booked days calendar, checkout, and an admin page. This app displays my ability to comprehensively create a beautiful front and back end that is efficient and easy to manage.',
       technologies: ['React', 'Express', 'MySQL', 'JWT', 'Redux', 'Node.js', 'Bcrypt'],
       type: 'CAR-RENTAL APPLICATION',
       link: 'https://github.com/ncortes04/car-rental',
@@ -33,8 +33,7 @@ const Projects = () => {
   },
   {img: techys,
     title: 'Techy',
-    description: "A full stack Blog application with user authentication and authorization. This project allows users to communicate about tech. Users can comment, view others profiles, create comments, delete comments, view their own profile, create posts, and delete posts.",
-    contribution: 'This was a collaborative project in which me and 3 other classmates were assigned. We started with an idea and turned it into an application. I was in charge of the front end and helped with the back end. I created the models for Redux and handled the filtering and display of the product',
+    description: "A full-stack Blog application with user authentication and authorization. This project allows users to communicate about tech. Users can comment, view others' profiles, create comments, delete comments, view their own profile, create posts, and delete posts.",
     technologies: ['React', 'Express', 'MongoDB', 'JWT', 'Sequelize', 'Node.JS','Bcrypt'],
     brief: 'Online Blog For Tech News',
     type: "BLOG APPLICATION",
@@ -42,7 +41,7 @@ const Projects = () => {
   },
   {img: cannabinode,
     title: 'Cannabinode',
-    description: 'Cannabinode is a website that allows the user to view and purchase marijuana products. The home page contains all of the inventory. The user also has the option to click on an individual item to view more information about that particular item. This project uses the MERN stack along with GraphQL and Stripe. This was a collaborative project in which me and 3 other classmates were assigned.',
+    description: 'Cannabinode is a website that allows the user to view and purchase marijuana products. The home page contains all of the inventory. The user also has the option to click on an individual item to view more information about that particular item. This project uses the MERN stack along with GraphQL and Stripe. This was a collaborative project in which I and 3 other classmates were assigned.',
     technologies: ['React', 'Express', 'MongoDB', 'JWT', 'GraphQl', 'Stripe', 'Node.JS', 'REDUX','Bcrypt'],
     brief: 'Online Store For Selling Cannabis',
     type: "E-commerce",
@@ -168,8 +167,8 @@ return (
   <span id="projects" className='link-tag'></span>
   <div className='project-header-div'>
     <div className='project-title-div'>
-      <p className='header-intro m-0'>Heres 4 of my 28 projects</p>
-      <h3 className='timeline-header'>My Projects.</h3>
+      <p className='header-intro m-0'>Here are 4 of my 28 projects</p>
+      <h3 className='timeline-header'>My Projects</h3>
     </div>
   </div>
   <div className='projects-carousel'>

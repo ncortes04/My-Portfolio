@@ -95,7 +95,7 @@ function Skills() {
         <a id="skills" className="link-tag"></a>
         <div className="skills-title-container">
           <h3 className="header-intro m-0">
-            Here are some thing's i'm good at
+            Here are some things i'm good at
           </h3>
           <h2 className="timeline-header m-0">
               My Skills

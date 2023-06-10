@@ -39,7 +39,7 @@ function AboutMe() {
         >
           <p className="description-intro light">Get To Know Me!</p>
           <p className="aboutme-description">
-            I am a beginner web developer from Tacoma, Washington. I have recently completed the full-stack coding boot camp from the University of Washington.
+            I am a beginner web developer from Tacoma, Washington. I have recently completed the full-stack coding boot camp at the University of Washington.
             The coding boot camp was a fast-paced, information-packed course that provided relevant material for modern web development.
             I spend my days reading material on web development and practicing what I learn. I have created multiple projects outside of my course material to practice and solidify my understanding of coding.
             I also spend a portion of my day studying algorithms and data structures.
