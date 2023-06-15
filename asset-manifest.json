@@ -1,10 +1,22 @@
 {
   "files": {
-    "main.css": "/My-Portfolio/static/css/main.588c52ee.css",
-    "main.js": "/My-Portfolio/static/js/main.a3abee78.js",
+    "main.css": "/My-Portfolio/static/css/main.f08cad6f.css",
+    "main.js": "/My-Portfolio/static/js/main.8fa96327.js",
+    "static/js/56.fe3663c1.chunk.js": "/My-Portfolio/static/js/56.fe3663c1.chunk.js",
+    "static/js/399.26a39a07.chunk.js": "/My-Portfolio/static/js/399.26a39a07.chunk.js",
+    "static/js/654.baff0017.chunk.js": "/My-Portfolio/static/js/654.baff0017.chunk.js",
+    "static/js/486.5a4a0a16.chunk.js": "/My-Portfolio/static/js/486.5a4a0a16.chunk.js",
+    "static/js/710.6338f8bc.chunk.js": "/My-Portfolio/static/js/710.6338f8bc.chunk.js",
+    "static/js/926.2c80123f.chunk.js": "/My-Portfolio/static/js/926.2c80123f.chunk.js",
+    "static/js/818.250a3943.chunk.js": "/My-Portfolio/static/js/818.250a3943.chunk.js",
+    "static/js/260.0f19aa24.chunk.js": "/My-Portfolio/static/js/260.0f19aa24.chunk.js",
+    "static/js/385.7d6ee8f4.chunk.js": "/My-Portfolio/static/js/385.7d6ee8f4.chunk.js",
+    "static/js/483.6278a047.chunk.js": "/My-Portfolio/static/js/483.6278a047.chunk.js",
+    "static/js/171.ad056977.chunk.js": "/My-Portfolio/static/js/171.ad056977.chunk.js",
     "static/js/787.48fbe5ec.chunk.js": "/My-Portfolio/static/js/787.48fbe5ec.chunk.js",
     "static/media/purple_planet.glb": "/My-Portfolio/static/media/purple_planet.5693cdebfee4538e8ef7.glb",
     "static/media/gaming_desktop_pc.glb": "/My-Portfolio/static/media/gaming_desktop_pc.da9badf29c845cd4d67c.glb",
+    "static/media/gaming_desktop_pc low.glb": "/My-Portfolio/static/media/gaming_desktop_pc low.ee26ee3b8c8ae51e8a7c.glb",
     "static/media/macbook-cannabinode.png": "/My-Portfolio/static/media/macbook-cannabinode.597f1129cf4374674e95.png",
     "static/media/macbook-shop-pay.png": "/My-Portfolio/static/media/macbook-shop-pay.ea76ac174a622a781aab.png",
     "static/media/macbook-techy.png": "/My-Portfolio/static/media/macbook-techy.2ef8a573133a65059b2e.png",
@@ -42,12 +54,22 @@
     "index.html": "/My-Portfolio/index.html",
     "static/media/icons8-css3.svg": "/My-Portfolio/static/media/icons8-css3.64fa1d1c4801d931c3717be71f6c020e.svg",
     "static/media/icons8-html-5.svg": "/My-Portfolio/static/media/icons8-html-5.8ae3d4adcd70a1028a6377697d9f33b0.svg",
-    "main.588c52ee.css.map": "/My-Portfolio/static/css/main.588c52ee.css.map",
-    "main.a3abee78.js.map": "/My-Portfolio/static/js/main.a3abee78.js.map",
+    "main.f08cad6f.css.map": "/My-Portfolio/static/css/main.f08cad6f.css.map",
+    "main.8fa96327.js.map": "/My-Portfolio/static/js/main.8fa96327.js.map",
+    "56.fe3663c1.chunk.js.map": "/My-Portfolio/static/js/56.fe3663c1.chunk.js.map",
+    "399.26a39a07.chunk.js.map": "/My-Portfolio/static/js/399.26a39a07.chunk.js.map",
+    "654.baff0017.chunk.js.map": "/My-Portfolio/static/js/654.baff0017.chunk.js.map",
+    "486.5a4a0a16.chunk.js.map": "/My-Portfolio/static/js/486.5a4a0a16.chunk.js.map",
+    "710.6338f8bc.chunk.js.map": "/My-Portfolio/static/js/710.6338f8bc.chunk.js.map",
+    "926.2c80123f.chunk.js.map": "/My-Portfolio/static/js/926.2c80123f.chunk.js.map",
+    "818.250a3943.chunk.js.map": "/My-Portfolio/static/js/818.250a3943.chunk.js.map",
+    "385.7d6ee8f4.chunk.js.map": "/My-Portfolio/static/js/385.7d6ee8f4.chunk.js.map",
+    "483.6278a047.chunk.js.map": "/My-Portfolio/static/js/483.6278a047.chunk.js.map",
+    "171.ad056977.chunk.js.map": "/My-Portfolio/static/js/171.ad056977.chunk.js.map",
     "787.48fbe5ec.chunk.js.map": "/My-Portfolio/static/js/787.48fbe5ec.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.588c52ee.css",
-    "static/js/main.a3abee78.js"
+    "static/css/main.f08cad6f.css",
+    "static/js/main.8fa96327.js"
   ]
 }
