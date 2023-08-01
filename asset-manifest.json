@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/My-Portfolio/static/css/main.f08cad6f.css",
-    "main.js": "/My-Portfolio/static/js/main.2fe93849.js",
+    "main.css": "/My-Portfolio/static/css/main.9b79be90.css",
+    "main.js": "/My-Portfolio/static/js/main.e9457ede.js",
     "static/js/56.fe3663c1.chunk.js": "/My-Portfolio/static/js/56.fe3663c1.chunk.js",
     "static/js/399.26a39a07.chunk.js": "/My-Portfolio/static/js/399.26a39a07.chunk.js",
     "static/js/654.baff0017.chunk.js": "/My-Portfolio/static/js/654.baff0017.chunk.js",
@@ -12,16 +12,16 @@
     "static/js/260.0f19aa24.chunk.js": "/My-Portfolio/static/js/260.0f19aa24.chunk.js",
     "static/js/385.7d6ee8f4.chunk.js": "/My-Portfolio/static/js/385.7d6ee8f4.chunk.js",
     "static/js/483.6278a047.chunk.js": "/My-Portfolio/static/js/483.6278a047.chunk.js",
+    "static/js/557.bb6b9d7b.chunk.js": "/My-Portfolio/static/js/557.bb6b9d7b.chunk.js",
     "static/js/171.ad056977.chunk.js": "/My-Portfolio/static/js/171.ad056977.chunk.js",
     "static/js/787.48fbe5ec.chunk.js": "/My-Portfolio/static/js/787.48fbe5ec.chunk.js",
-    "static/media/gaming_desktop_pc.glb": "/My-Portfolio/static/media/gaming_desktop_pc.da9badf29c845cd4d67c.glb",
-    "static/media/gaming_desktop_pc low.glb": "/My-Portfolio/static/media/gaming_desktop_pc low.ee26ee3b8c8ae51e8a7c.glb",
     "static/media/purple_planet_low.glb": "/My-Portfolio/static/media/purple_planet_low.0e94fb95c66fdc06c4b2.glb",
     "static/media/macbook-cannabinode.png": "/My-Portfolio/static/media/macbook-cannabinode.597f1129cf4374674e95.png",
+    "static/media/macbook-blogy.png": "/My-Portfolio/static/media/macbook-blogy.f938ff5e6d391b5705a5.png",
     "static/media/macbook-shop-pay.png": "/My-Portfolio/static/media/macbook-shop-pay.ea76ac174a622a781aab.png",
     "static/media/macbook-techy.png": "/My-Portfolio/static/media/macbook-techy.2ef8a573133a65059b2e.png",
     "static/media/macbook-carrental.png": "/My-Portfolio/static/media/macbook-carrental.fb0b5355a594ec2cd1a7.png",
-    "static/media/Resume.pdf": "/My-Portfolio/static/media/Resume.a9bbafdec54e058f9ba8.pdf",
+    "static/media/Resume.pdf": "/My-Portfolio/static/media/Resume.e0834369a15dd7c4e5e9.pdf",
     "static/media/Lovepik_com-401373103-programmer-knocking-code-work-icon-free-vector-illustration-mate.webp": "/My-Portfolio/static/media/Lovepik_com-401373103-programmer-knocking-code-work-icon-free-vector-illustration-mate.75a7ab4319d7d025f862.webp",
     "static/media/myself.webp": "/My-Portfolio/static/media/myself.f942f7c9e2bf225238be.webp",
     "static/media/plus-jakarta-sans-latin-400-normal.woff": "/My-Portfolio/static/media/plus-jakarta-sans-latin-400-normal.f8419a1fb2a969508259.woff",
@@ -54,8 +54,8 @@
     "index.html": "/My-Portfolio/index.html",
     "static/media/icons8-css3.svg": "/My-Portfolio/static/media/icons8-css3.64fa1d1c4801d931c3717be71f6c020e.svg",
     "static/media/icons8-html-5.svg": "/My-Portfolio/static/media/icons8-html-5.8ae3d4adcd70a1028a6377697d9f33b0.svg",
-    "main.f08cad6f.css.map": "/My-Portfolio/static/css/main.f08cad6f.css.map",
-    "main.2fe93849.js.map": "/My-Portfolio/static/js/main.2fe93849.js.map",
+    "main.9b79be90.css.map": "/My-Portfolio/static/css/main.9b79be90.css.map",
+    "main.e9457ede.js.map": "/My-Portfolio/static/js/main.e9457ede.js.map",
     "56.fe3663c1.chunk.js.map": "/My-Portfolio/static/js/56.fe3663c1.chunk.js.map",
     "399.26a39a07.chunk.js.map": "/My-Portfolio/static/js/399.26a39a07.chunk.js.map",
     "654.baff0017.chunk.js.map": "/My-Portfolio/static/js/654.baff0017.chunk.js.map",
@@ -69,7 +69,7 @@
     "787.48fbe5ec.chunk.js.map": "/My-Portfolio/static/js/787.48fbe5ec.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f08cad6f.css",
-    "static/js/main.2fe93849.js"
+    "static/css/main.9b79be90.css",
+    "static/js/main.e9457ede.js"
   ]
 }
