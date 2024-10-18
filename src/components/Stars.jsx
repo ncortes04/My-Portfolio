@@ -1,11 +1,12 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 import { inSphere } from "maath/random/dist/maath-random.esm";
+import ComputerPerformanceChecker from "../utils/performaceChecker";
 
-const Stars = (props) => {
+const Stars = ({ isPowerful }) => {
   const ref = useRef();
-  const sphere = inSphere(new Float32Array(5000), { radius: 10 });
+  const sphere = inSphere(new Float32Array(4000), { radius: 10 });
 
   useFrame((state, delta) => {
     ref.current.rotation.x -= delta / 10;
@@ -14,11 +15,11 @@ const Stars = (props) => {
 
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
-      <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
+      <Points ref={ref} positions={sphere} stride={3} frustumCulled>
         <PointMaterial
           transparent
           color="#f272c8"
-          size={0.01}
+          size={isPowerful ? 0.01 : 0}
           sizeAttenuation={true}
           depthWrite={false}
         />
@@ -28,30 +29,18 @@ const Stars = (props) => {
 };
 
 const StarsCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      const { innerWidth, innerHeight } = window;
-      setIsMobile(innerWidth < 768 || innerHeight < 768);
-    };
-
-    handleResize(); // Check on initial render
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  if (isMobile) {
-    return null; // Render nothing on mobile devices
-  }
-
   return (
-    <div className="stars">
-      <Canvas camera={{ position: [0, 0, 15] }}>
-        <Stars />
-      </Canvas>
-    </div>
+    <ComputerPerformanceChecker>
+      {(isPowerful) =>
+        isPowerful ? (
+          <div className="stars">
+            <Canvas camera={{ position: [0, 0, 15] }}>
+              <Stars isPowerful={isPowerful} />
+            </Canvas>
+          </div>
+        ) : null
+      }
+    </ComputerPerformanceChecker>
   );
 };
 

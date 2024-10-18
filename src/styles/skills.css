@@ -36,14 +36,18 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
-.ball-container {
+.skill-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
-
+.skill-img {
+  width: 100px;
+}
 .skills-animate {
   display: flex;
   flex-direction: column;
@@ -51,7 +55,11 @@
   align-items: center;
   opacity: 0;
 }
-
+.skill-name {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
 
 
 

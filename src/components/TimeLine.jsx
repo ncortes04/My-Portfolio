@@ -99,8 +99,8 @@ const TimeLine = () => {
           company: 'Job Hunt',
           icon: linkedinsvg,
           points: [
-            'I believe i am currently equiped with attequite knowledge of creating a fast and responsive web applications.',
-            'I am currently looking for jobs that i can not only grow as a coder but use my current skills to create applications',
+            'I believe i am currently equiped with adequate knowledge of creating fast and responsive web applications.',
+            'I am currently looking for jobs that I can not only grow as a coder but use my current skills to create applications',
           ]
         },
       ];

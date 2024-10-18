@@ -7,19 +7,19 @@ const Sphere = (props) => {
   const [decal] = useTexture([props.imgUrl]);
   const [scale, setScale] = useState(2.75);
 
+  const updateScale = () => {
+    const screenWidth = window.innerWidth;
+
+    if (isMobile && screenWidth < 700) {
+      setScale(1.5);
+    } else if (isMobile && screenWidth < 1200) {
+      setScale(2); 
+    } else {
+      setScale(2.75); 
+    }
+  };
+
   useEffect(() => {
-    const updateScale = () => {
-      const screenWidth = window.innerWidth;
-
-      if (isMobile && screenWidth < 700) {
-        setScale(1.5); // Adjust scale for mobile devices with small screens
-      } else if (isMobile && screenWidth < 1200) {
-        setScale(2); // Adjust scale for mobile devices with medium-sized screens
-      } else {
-        setScale(2.75); // Default scale for desktop or large screens
-      }
-    };
-
     updateScale();
 
     window.addEventListener("resize", updateScale);

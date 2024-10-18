@@ -4,7 +4,7 @@ import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import PurplePlanet from "./PurplePlanet";
-import planet from '../assets/purple_planet.glb'
+import planet from '../assets/purple_planet_low.glb'
 
 const MySwal = withReactContent(Swal);
 

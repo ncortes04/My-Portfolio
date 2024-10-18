@@ -194,6 +194,10 @@ margin: 0;
 .hide-slide {
     display: none;
   }
+  .project-links {
+    display: flex;
+    gap: 20px;
+  }
 @media screen and (min-width: 1500px) {
     .slick-slide > div {
         margin: 5px 200px 15px;

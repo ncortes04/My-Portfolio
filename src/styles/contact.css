@@ -145,7 +145,7 @@ textarea::placeholder {
   }
   .contact-right {
     width: 50%;
-    height: 100%;
+    height: 500px;
   }
   .nav-link-div-contacts span a {
     transition: all .3s ease-in-out;
@@ -173,9 +173,9 @@ textarea::placeholder {
         align-self: center;
         justify-content: center;
       }
+
       .contact-right {
         width: 100%;
-        height: 500px;
       }
       .planet-container {
         min-height: 500px

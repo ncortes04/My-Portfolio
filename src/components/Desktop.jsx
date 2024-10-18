@@ -5,6 +5,8 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import * as THREE from 'three';
 import Loading from './Loading';
 import { isMobile } from 'react-device-detect';
+import LowQualityModel from '../assets/gaming_desktop_pc low.glb';
+import ComputerPerformanceChecker from '../utils/performaceChecker';
 
 const Model = ({ model }) => {
   const modelGroup = useRef();
@@ -17,7 +19,7 @@ const Model = ({ model }) => {
   useEffect(() => {
     controls.current = new OrbitControls(camera, renderer);
     controls.current.enableDamping = true;
-    controls.current.dampingFactor = isMobile ? 0.1 : 0.05; // Adjust the damping factor for mobile devices
+    controls.current.dampingFactor = isMobile ? 0.1 : 0.05; 
     controls.current.rotateSpeed = 0.5;
 
     return () => {
@@ -70,12 +72,14 @@ const Model = ({ model }) => {
 
 const Three = ({ model, cameraPosition, fval }) => {
   const [loading, setLoading] = useState(true);
+  const [loadedModel, setLoadedModel] = useState(null);
 
   useEffect(() => {
     const loader = new GLTFLoader();
     loader.load(
       model,
       (gltf) => {
+        setLoadedModel(gltf.scene);
         setLoading(false);
       },
       undefined,
@@ -91,23 +95,29 @@ const Three = ({ model, cameraPosition, fval }) => {
   }
 
   return (
-    <Canvas
-      camera={{ position: [20, 4, 5], fov: 40 }}
-      pixelRatio={isMobile ? 0.8 : undefined} // Lower pixel ratio for mobile devices
-      antialias={!isMobile} // Disable anti-aliasing for mobile devices
-    >
-      <hemisphereLight intensity={0.25} groundColor="black" />
-      <spotLight
-        position={[-20, 50, 10]}
-        angle={0.12}
-        penumbra={1}
-        intensity={1.2}
-        castShadow
-        shadow-mapSize={100}
-      />
-      <pointLight intensity={1} />
-      <Model model={model} />
-    </Canvas>
+    <ComputerPerformanceChecker>
+      {(isPowerful) => (
+        <Canvas
+          camera={{ position: [20, 4, 5], fov: 40 }}
+          antialias={!isMobile}
+        >
+          <hemisphereLight intensity={0.25} groundColor="black" />
+          <spotLight
+            position={[-20, 50, 10]}
+            angle={0.12}
+            penumbra={1}
+            intensity={1.2}
+            castShadow
+            shadow-mapSize={100}
+          />
+          {isPowerful ? (
+            loadedModel ? <Model model={model} /> : null
+          ) : (
+            <Model model={LowQualityModel} />
+          )}
+        </Canvas>
+      )}
+    </ComputerPerformanceChecker>
   );
 };
 
