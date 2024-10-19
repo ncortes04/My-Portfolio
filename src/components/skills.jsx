@@ -31,6 +31,8 @@ const Skills = () => {
     const loadLogos = async () => {
       try {
         const logosData = await Promise.all([
+          import("../assets/javalogo.svg"),
+          import("../assets/pythonlogo.svg"),
           import("../assets/icons8-javascript.svg"),
           import("../assets/icons8-html-5.svg"),
           import("../assets/icons8-css3.svg"),
@@ -46,18 +48,20 @@ const Skills = () => {
         ]);
 
         const logos = [
-          { logo: logosData[0].default, name: "JavaScript" },
-          { logo: logosData[1].default, name: "HTML" },
-          { logo: logosData[2].default, name: "CSS" },
-          { logo: logosData[3].default, name: "Node.js" },
-          { logo: logosData[4].default, name: "Git" },
-          { logo: logosData[5].default, name: "MongoDB" },
-          { logo: logosData[6].default, name: "MySQL" },
-          { logo: logosData[7].default, name: "Logo 192" },
-          { logo: logosData[8].default, name: "Bootstrap" },
-          { logo: logosData[9].default, name: "Three.js" },
-          { logo: logosData[10].default, name: "Next.js" },
-          { logo: logosData[11].default, name: "Visual Studio Code" },
+          { logo: logosData[0].default, name: "Java" },
+          { logo: logosData[1].default, name: "Python" },
+          { logo: logosData[2].default, name: "JavaScript" },
+          { logo: logosData[3].default, name: "HTML" },
+          { logo: logosData[4].default, name: "CSS" },
+          { logo: logosData[5].default, name: "Node.js" },
+          { logo: logosData[6].default, name: "Git" },
+          { logo: logosData[7].default, name: "MongoDB" },
+          { logo: logosData[8].default, name: "MySQL" },
+          { logo: logosData[9].default, name: "React" },
+          { logo: logosData[10].default, name: "Bootstrap" },
+          { logo: logosData[11].default, name: "Three.js" },
+          { logo: logosData[12].default, name: "Next.js" },
+          { logo: logosData[13].default, name: "Visual Studio Code" },
         ];
 
         setLogos(logos);

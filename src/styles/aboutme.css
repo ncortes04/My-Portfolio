@@ -110,31 +110,65 @@
   width: 60%;
 }
 
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Space between skill cards */
+  padding: 24px; /* Padding for the container */
+  justify-content: center; /* Center the skill cards */
+}
+
 .skill-card {
-  padding: 12px;
-  border-radius: 10px;
-  background-color: #122b39c3;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #1a3b50;
   color: #5cf1f1;
   font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+
 
 .contact-btn {
-  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 24px;
   border: 2px solid #5cf1f1;
-  display: flex;
+  border-radius: 8px;
+  background: transparent;
+  color: #5cf1f1;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
   position: relative;
-  padding: 10px 20px 10px 20px;
-  width: fit-content;
-  font-weight: 700;
-  font-size: 20px;
   cursor: pointer;
-  margin-top: 20px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  width: fit-content;
 }
 
+.contact-btn:hover {
+  background: rgba(92, 241, 241, 0.1);
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.arrow-icon {
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
 .contact-btn a {
   text-decoration: none;
   color: #5cf1f1;
-  margin-right: 40px;
+}
+.contact-btn:hover .arrow-icon {
+  animation: moveRightAndBack 1.5s infinite;
 }
 
 .about-body-left {
@@ -171,13 +205,13 @@
 
 @keyframes moveRightAndBack {
   0% {
-    right: 0;
+    transform: translateX(0);
   }
   50% {
-    right: 15px;
+    transform: translateX(15px);
   }
   100% {
-    right: 0;
+    transform: translateX(0);
   }
 }
 

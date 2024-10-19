@@ -37,21 +37,20 @@
     margin: 0;
   }
   .contactme-links-div {
-    padding: 20px;
     display: flex;
-    box-shadow: inset 0 1px 0 0 rgba(148,163,184,0.1);
-    background-color: rgba(148,163,184,0.1);
     flex-direction: column;
-    border-radius: 30px;
-    gap: 20px;
-    justify-content: center;
-    width: 70%;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: rgba(148, 163, 184, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     max-width: 500px;
 }
-.contact-input-form form{
+.contact-input-form form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
 }
 .contact-form {
   width: 70%;
@@ -59,33 +58,35 @@
   display: flex;
   align-items: center;
 }
-.contact-submit {
-  background-color: transparent;
-  border: 2px solid #5cf1f1;
-  color: #5cf1f1;
-  padding: 10px 20px 10px 20px;
-  width: fit-content;
+.contactme-links-div .header-intro {
+  font-size: 32px;
   font-weight: 700;
-  font-size: 20px;
-  transition: all .3s ease-in-out;
-  cursor: pointer;
+  color: #5cf1f1;
+  margin-bottom: 20px;
 }
-.contact-submit:hover {
+.contact-submit {
   background-color: #5cf1f1;
-  color: black;
-}
-.contact-form input {
-  background-color: rgba(148, 163, 184, 0.304);
+  color: #0d1b2a;
+  padding: 14px;
   border: none;
   border-radius: 10px;
-  width: 90%;
-  padding: 15px;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  align-self: center;
+  width: fit-content;
+  margin-top: 20px; /* Adds spacing between the form and button */
 }
+.contact-submit:hover {
+  background-color: #00e1e1;
+  transform: translateY(-2px);
+}
+
 input::placeholder,
 textarea::placeholder {
-  color: white;
-  font-weight: 600;
-  font-size: 15px;
+  color: #a9b3c1; /* More subtle placeholder color */
+  font-weight: 500;
 }
 
 .my-swal-html-container {
@@ -108,14 +109,24 @@ textarea::placeholder {
 
 
 
-.contact-form textarea {
-  background-color: rgba(148, 163, 184, 0.304);
-  border: none;
-  height: 100px;
+.contact-input-form input,
+.contact-input-form textarea {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #5cf1f1;
   border-radius: 10px;
-  width: 90%;
   padding: 15px;
+  color: #f6f3f7;
+  font-size: 16px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  width: 90%;
 }
+.contact-input-form input:focus,
+.contact-input-form textarea:focus {
+  border: 1px solid #00e1e1;
+  box-shadow: 0 4px 8px rgba(0, 225, 225, 0.3);
+  outline: none;
+}
+
 .contactme-links-div p{
     font-size: 18px;
     font-weight: 600;

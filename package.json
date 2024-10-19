@@ -5,6 +5,7 @@
   "private": false,
   "dependencies": {
     "@fontsource/plus-jakarta-sans": "^5.0.2",
+    "@fontsource/poppins": "^5.1.0",
     "@react-three/drei": "^9.74.1",
     "@react-three/fiber": "^8.13.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -13,7 +14,7 @@
     "drei": "^2.2.21",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^10.12.16",
-    "react": "^18.2.0",
+    "react": "^18.3.1",
     "react-colorful": "^5.6.1",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
@@ -28,7 +29,7 @@
     "slick-carousel": "^1.8.1",
     "sweetalert2": "^11.7.11",
     "sweetalert2-react-content": "^5.0.7",
-    "three": "^0.153.0",
+    "three": "^0.169.0",
     "use-debounce": "^9.0.4",
     "valtio": "^1.10.5",
     "web-vitals": "^2.1.4"

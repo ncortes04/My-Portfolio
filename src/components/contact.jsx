@@ -4,7 +4,7 @@ import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import PurplePlanet from "./PurplePlanet";
-import planet from '../assets/purple_planet_low.glb'
+import planet from "../assets/purple_planet_low.glb";
 
 const MySwal = withReactContent(Swal);
 
@@ -24,20 +24,28 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
+
+    const userId = process.env.REACT_APP_API_KEY;
+    if (!userId) {
+      console.error(
+        "The user ID is required. Visit https://dashboard.emailjs.com/admin/integration"
+      );
+      return;
+    }
+
     const templateParams = {
       from_name: formValues.name,
       to_name: "Nicholas Cortes",
       from_email: formValues.email,
       message: formValues.message,
     };
-  
+
     emailjs
       .send(
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
         process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         templateParams,
-        process.env.REACT_APP_API_KEY,
+        userId
       )
       .then(() => {
         MySwal.fire({
@@ -52,7 +60,7 @@ function Contact() {
             cancelButton: "my-swal-cancel-button",
           },
         });
-  
+
         setFormValues({
           name: "",
           email: "",
@@ -60,7 +68,7 @@ function Contact() {
         });
       })
       .catch((error) => {
-        console.log(error.text);
+        console.error("Failed to send message: ", error);
       });
   };
 
@@ -68,7 +76,9 @@ function Contact() {
     <div className="contact-container">
       <a id="contact"></a>
       <div className="contactme-title-div">
-        <h3 className="header-intro m-0">Here is a few ways you can contact me</h3>
+        <h3 className="header-intro m-0">
+          Here are a few ways you can contact me
+        </h3>
         <h2 className="timeline-header m-0">Contact Me</h2>
       </div>
       <div className="contact-form">
@@ -124,6 +134,6 @@ function Contact() {
       </div>
     </div>
   );
-}  
+}
 
 export default Contact;

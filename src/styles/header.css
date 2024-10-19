@@ -23,7 +23,14 @@
 .nowrap {
   white-space: nowrap;
 }
-
+.header-intro-title-div {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.header-intro-title-div h2{
+  margin: 0px;
+}
 .header-intro {
   color: #5cf1f1;
   font-size: 25px;
@@ -31,7 +38,7 @@
 }
 
 .light {
-  color: #f6f3f7;
+  color: #f6f3f7 !important
 }
 
 .desktop-3d {
@@ -64,7 +71,7 @@
 }
 
 .header-title-div h2 {
-  font-size: 80px;
+  font-size: 67px;
   color: #727f93;
 }
 
@@ -84,13 +91,30 @@
   margin-right: 40px;
 }
 
+.view-work-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 02px 24px;
+  border: 2px solid #5cf1f1;
+  border-radius: 8px;
+  background: transparent;
+  color: #5cf1f1;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.view-work-btn:hover {
+  background: rgba(92, 241, 241, 0.1);
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
 .arrow-icon {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: right 0.3s ease-in-out;
-  margin-right: 10px;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .view-work-btn:hover .arrow-icon {
@@ -154,8 +178,8 @@
     gap:  0px;
     width: 100%;
   }
-  .header-flex-left h2 {
-    font-size: 7vh;
+  .header-title-div div h2 {
+    font-size: 5vh;
   }
 }
 

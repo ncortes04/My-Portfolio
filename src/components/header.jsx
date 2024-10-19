@@ -2,6 +2,7 @@ import "../styles/header.css";
 import image from "../assets/Lovepik_com-401373103-programmer-knocking-code-work-icon-free-vector-illustration-mate.webp";
 import { useState, useEffect } from "react";
 import arrow from "../assets/right-arrow-svgrepo-com.svg";
+import Moon from "./moon";
 function Header() {
   const [leftDivX, setLeftDivX] = useState(-100);
   const [rightDivX, setRightDivX] = useState(100);
@@ -24,10 +25,11 @@ function Header() {
         >
           <div className="header-title-div">
             <p className="header-intro m-0">Hello, my name is,</p>
-            <h2 className="m-0  nowrap">
-              <span className="light">Nicholas Cortes.</span>
-              <br></br>A Full-Stack<br></br> Web Developer.
-            </h2>
+            <div className="header-intro-title-div m-0  nowrap">
+              <h2 className="light">Nicholas Cortes.</h2>
+              <h2>A Full-Stack</h2>
+              <h2>Web Developer.</h2>
+            </div>
             <p className="header-description m-0">
               I am a motivated full-stack developer with a genuine love for
               coding. I enjoy working in a fast-paced envirnoment to challenge
@@ -43,6 +45,7 @@ function Header() {
             </a>
           </div>
         </div>
+        <Moon />
       </div>
     </header>
   );

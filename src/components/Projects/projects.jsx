@@ -236,7 +236,7 @@ const Projects = () => {
       <span id="projects" className="link-tag"></span>
       <div className="project-header-div">
         <div className="project-title-div">
-          <p className="header-intro m-0">Here are 4 of my 28 projects</p>
+          <p className="header-intro m-0">Here are 5 of my 30 plus projects</p>
           <h3 className="timeline-header">My Projects</h3>
         </div>
       </div>
