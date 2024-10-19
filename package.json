@@ -1,0 +1,67 @@
+{
+  "name": "My-Portfolio",
+  "homepage": "https://ncortes04.github.io/My-Portfolio/#/",
+  "version": "0.1.0",
+  "private": false,
+  "dependencies": {
+    "@fontsource/plus-jakarta-sans": "^5.0.2",
+    "@fontsource/poppins": "^5.1.0",
+    "@react-three/drei": "^9.74.1",
+    "@react-three/fiber": "^8.13.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "drei": "^2.2.21",
+    "emailjs-com": "^3.2.0",
+    "framer-motion": "^10.12.16",
+    "react": "^18.3.1",
+    "react-colorful": "^5.6.1",
+    "react-device-detect": "^2.2.3",
+    "react-dom": "^18.2.0",
+    "react-lazyload": "^3.2.0",
+    "react-markdown": "^8.0.6",
+    "react-router-dom": "^6.10.0",
+    "react-router-hash-link": "^2.4.3",
+    "react-scripts": "5.0.1",
+    "react-slick": "^0.29.0",
+    "react-three-fiber": "^6.0.13",
+    "react-vertical-timeline-component": "^3.6.0",
+    "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.7.11",
+    "sweetalert2-react-content": "^5.0.7",
+    "three": "^0.169.0",
+    "use-debounce": "^9.0.4",
+    "valtio": "^1.10.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "file-loader": "^6.2.0",
+    "gh-pages": "^5.0.0"
+  }
+}
