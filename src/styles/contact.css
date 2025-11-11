@@ -11,7 +11,7 @@
     align-items: flex-start;
     width: 90%;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 .contactme-description {
   font-size: 20px;
@@ -25,17 +25,12 @@
     padding: 0;
     font-size: 40px;
     margin: 15px;
-    height: 40px;
     white-space: nowrap;
     text-transform: uppercase;
     color: #181717;
   }
 
-  .contact-link-title {
-    font-size: 24px;
-    font-weight: 600;
-    margin: 0;
-  }
+ 
   .contactme-links-div {
     display: flex;
     flex-direction: column;
@@ -95,6 +90,13 @@ textarea::placeholder {
     font-weight: 600 !important;
   }
 
+  .contact-link-title{
+    font-size: 30px !important;
+    color: white;
+    font-weight: 600;
+    max-width: 60rem;
+    line-height: 1.7;
+  }
 .my-swal-confirm-button {
   background-color: transparent !important;
   border: 2px solid black !important;

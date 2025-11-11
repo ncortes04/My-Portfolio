@@ -39,24 +39,28 @@ function AboutMe() {
         >
           <p className="description-intro light">Get to Know Me!</p>
           <p className="aboutme-description">
-            I am a web developer from Tacoma, Washington, with a passion for
-            creating efficient, scalable web applications. I have completed a
-            full-stack coding boot camp at the University of Washington, where I
-            gained practical experience with modern web technologies in a
-            fast-paced, immersive environment.
+            I’m a software developer and Computer Science major at the
+            University of Washington, passionate about designing intelligent,
+            scalable applications that solve real-world problems. My journey
+            began at the UW Full-Stack Web Development Bootcamp, where I built a
+            strong foundation in modern web technologies through hands-on
+            projects and teamwork.
           </p>
+
           <p className="aboutme-description">
-            My skills are centered around the MERN stack, which I find ideal for
-            developing lightweight and dynamic applications. I also work with
-            the SERN stack and am comfortable adapting to different frameworks
-            based on the project requirements. I continually refine my abilities
-            by building projects, studying algorithms, and keeping up with new
-            trends in web development.
+            Since then, I’ve expanded my skills through academic study and
+            independent projects — combining software engineering principles,
+            data structures, and machine learning techniques. My main focus is
+            full-stack development using the MERN and SERN stacks, but I also
+            enjoy exploring Python for backend and AI-driven applications.
           </p>
+
           <p className="aboutme-description">
-            I am enthusiastic about opportunities that challenge me and help me
-            grow professionally. If you have a position that aligns with my
-            skills, please don't hesitate to reach out.
+            I love building tools that make life easier — from productivity apps
+            to data-driven web platforms — and I’m always eager to learn,
+            collaborate, and grow as a developer. If you’re working on something
+            innovative or need a reliable developer who’s driven by curiosity
+            and impact, I’d love to connect.
           </p>
           <div className="contact-btn">
             <Link to="/#contact">Contact Me </Link>
@@ -77,17 +81,17 @@ function AboutMe() {
           <div className="about-right-bottom">
             <h3 className="skills-header light">Additional Skills</h3>
             <div className="about-skills-flex">
-              <div className="skill-card">EXPRESS</div>
-              <div className="skill-card">REDUX</div>
-              <div className="skill-card">MONGOOSE</div>
-              <div className="skill-card">SEQUELIZE</div>
-              <div className="skill-card">RESPONSIVE DESIGN</div>
-              <div className="skill-card">TERMINAL</div>
-              <div className="skill-card">JEST</div>
-              <div className="skill-card">GRAPHQL</div>
-              <div className="skill-card">PWAS</div>
-              <div className="skill-card">REST API'S</div>
-              <div className="skill-card">BOOTSTRAP</div>
+              <div className="skill-card">AI Integration</div>
+              <div className="skill-card">Computer Vision</div>
+              <div className="skill-card">Cloud Deployment</div>
+              <div className="skill-card">API Design</div>
+              <div className="skill-card">CI/CD</div>
+              <div className="skill-card">UX Optimization</div>
+              <div className="skill-card">Data Modeling</div>
+              <div className="skill-card">Automation</div>
+              <div className="skill-card">Testing</div>
+              <div className="skill-card">Responsive UI</div>
+              <div className="skill-card">Agile Workflow</div>
             </div>
           </div>
         </div>

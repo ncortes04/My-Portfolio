@@ -100,13 +100,24 @@ const TimeLine = () => {
     },
     {
       title: "Computer Science Major at ASU",
-      date: "Aug 2024 - Present",
+      date: "Aug 2024 - Jan 2025",
       company: "Arizona State University",
       icon: asusvg,
       points: [
-        "Currently pursuing a major in Computer Science(Software Engineering) at Arizona State University.",
-        "Building a strong foundation in algorithms, data structures, software development, and more.",
-        "Actively participating in coding projects and learning about advanced computer science concepts.",
+        "Began my Computer Science (Software Engineering) studies at Arizona State University.",
+        "Built a strong foundation in algorithms, data structures, and software development principles.",
+        "Actively participated in coding projects and gained hands-on experience with modern development tools.",
+      ],
+    },
+    {
+      title: "Computer Science Major at UW",
+      date: "Jan 2025 - Present",
+      company: "University of Washington",
+      icon: UWlogo, // 👈 Replace this with your other UW logo import if you have one
+      points: [
+        "Transferred from Arizona State University to continue pursuing a Bachelor’s degree in Computer Science at the University of Washington.",
+        "Focusing on advanced coursework in software engineering, machine learning, and systems programming.",
+        "Engaged in collaborative research and development projects to apply CS knowledge to real-world challenges.",
       ],
     },
   ];

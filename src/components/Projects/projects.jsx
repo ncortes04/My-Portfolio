@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import Slider from "react-slick";
 import shoppay from "../../assets/macbook-shop-pay.png";
-import cannabinode from "../../assets/macbook-cannabinode.png";
+import studyGen from "../../assets/study-gen-mac.png";
 import carrental from "../../assets/macbook-carrental.png";
 import blogy from "../../assets/macbook-blogy.png";
 import techys from "../../assets/macbook-techy.png";
@@ -15,22 +15,24 @@ const Projects = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const images = [
     {
-      img: blogy,
-      title: "Blogy",
-      description:
-        "Blogy is a full stack interactive blog application. Users are able to create their own blog posts, complete with a bold header, a large cover image in which that user can upload, and engaging content. The blogging process is streamlined and user-friendly, with a built-in post editor and a preview. Users can easily update your profile by navigating to your user profile and selecting the pencil option. From there, users can upload a new profile picture, update their designation, and update their bio.",
+      img: studyGen,
+      title: "Study Planner Assistant",
+      description: `The Study Planner Assistant is a fully automated tool that captures, detects, interprets, and summarizes academic calendars using YOLO-based object detection, OCR, and GPT reasoning. Built for Canvas-style calendar screenshots, this system identifies assignments, groups them by day, and generates personalized study plans.`,
       technologies: [
-        "NEXT.js",
-        "Prisma",
-        "MySQL",
-        "JWT",
-        "SCSS",
+        "Python",
+        "YOLOv5",
+        "Tesseract OCR",
+        "OpenAI GPT-4o",
         "Node.js",
-        "Bcrypt",
+        "Puppeteer",
+        "Sharp",
+        "Tkinter",
+        "OpenCV",
       ],
-      type: "BLOG APPLICATION",
-      link: "https://github.com/ncortes04/blogy",
-      website: "https://ncortes04-blogy-bba95626f45f.herokuapp.com/",
+      type: "AI-POWERED STUDY PLANNER",
+      brief: "Automated calendar-to-study-plan system using YOLO + GPT.",
+      link: "https://github.com/ncortes04/study-generator",
+      website: "",
     },
     {
       img: carrental,
@@ -50,6 +52,25 @@ const Projects = () => {
       link: "https://github.com/ncortes04/car-rental",
       website: "https://ncortes-car-rental.herokuapp.com/",
     },
+    {
+      img: blogy,
+      title: "Blogy",
+      description:
+        "Blogy is a full stack interactive blog application. Users are able to create their own blog posts, complete with a bold header, a large cover image in which that user can upload, and engaging content. The blogging process is streamlined and user-friendly, with a built-in post editor and a preview. Users can easily update your profile by navigating to your user profile and selecting the pencil option. From there, users can upload a new profile picture, update their designation, and update their bio.",
+      technologies: [
+        "NEXT.js",
+        "Prisma",
+        "MySQL",
+        "JWT",
+        "SCSS",
+        "Node.js",
+        "Bcrypt",
+      ],
+      type: "BLOG APPLICATION",
+      link: "https://github.com/ncortes04/blogy",
+      website: "https://ncortes04-blogy-bba95626f45f.herokuapp.com/",
+    },
+
     {
       img: shoppay,
       title: "Shop-Pay",
@@ -85,26 +106,6 @@ const Projects = () => {
       brief: "Online Blog For Tech News",
       type: "BLOG APPLICATION",
       link: "https://github.com/ncortes04/tech-blog",
-    },
-    {
-      img: cannabinode,
-      title: "Cannabinode",
-      description:
-        "Cannabinode is a website that allows the user to view and purchase marijuana products. The home page contains all of the inventory. The user also has the option to click on an individual item to view more information about that particular item. This project uses the MERN stack along with GraphQL and Stripe. This was a collaborative project in which I and 3 other classmates were assigned.",
-      technologies: [
-        "React",
-        "Express",
-        "MongoDB",
-        "JWT",
-        "GraphQl",
-        "Stripe",
-        "Node.JS",
-        "REDUX",
-        "Bcrypt",
-      ],
-      brief: "Online Store For Selling Cannabis",
-      type: "E-commerce",
-      link: "https://github.com/ncortes04/cannabinode",
     },
   ];
 

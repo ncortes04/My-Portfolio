@@ -41,14 +41,6 @@ function NavBar() {
         >
           Linkedin Button
         </a>
-        <a
-          href="https://stackoverflow.com/users/21443127/ncortes"
-          rel="noreferrer"
-          target="_blank"
-          className="stackoverflowBtn"
-        >
-          Stack Overflow Button
-        </a>
       </div>
     </nav>
   );
