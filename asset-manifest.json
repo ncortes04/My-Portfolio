@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/My-Portfolio/static/css/main.03a51e85.css",
-    "main.js": "/My-Portfolio/static/js/main.6b755512.js",
+    "main.js": "/My-Portfolio/static/js/main.516f2798.js",
     "static/js/220.5a0356b8.chunk.js": "/My-Portfolio/static/js/220.5a0356b8.chunk.js",
     "static/js/694.c2152ece.chunk.js": "/My-Portfolio/static/js/694.c2152ece.chunk.js",
     "static/js/885.649e9537.chunk.js": "/My-Portfolio/static/js/885.649e9537.chunk.js",
@@ -19,11 +19,11 @@
     "static/js/453.99050793.chunk.js": "/My-Portfolio/static/js/453.99050793.chunk.js",
     "static/media/purple_planet_low.glb": "/My-Portfolio/static/media/purple_planet_low.0e94fb95c66fdc06c4b2.glb",
     "static/media/macbook-blogy.png": "/My-Portfolio/static/media/macbook-blogy.f938ff5e6d391b5705a5.png",
+    "static/media/Resume.pdf": "/My-Portfolio/static/media/Resume.f14d7c1b072cf93646b8.pdf",
     "static/media/macbook-shop-pay.png": "/My-Portfolio/static/media/macbook-shop-pay.ea76ac174a622a781aab.png",
     "static/media/macbook-techy.png": "/My-Portfolio/static/media/macbook-techy.2ef8a573133a65059b2e.png",
     "static/media/study-gen-mac.png": "/My-Portfolio/static/media/study-gen-mac.e7cd3bc82c7128c836fa.png",
     "static/media/macbook-carrental.png": "/My-Portfolio/static/media/macbook-carrental.fb0b5355a594ec2cd1a7.png",
-    "static/media/UWResume_2025_v3.pdf": "/My-Portfolio/static/media/UWResume_2025_v3.3a1223343263ca283708.pdf",
     "static/media/Lovepik_com-401373103-programmer-knocking-code-work-icon-free-vector-illustration-mate.webp": "/My-Portfolio/static/media/Lovepik_com-401373103-programmer-knocking-code-work-icon-free-vector-illustration-mate.75a7ab4319d7d025f862.webp",
     "static/media/myself.webp": "/My-Portfolio/static/media/myself.f942f7c9e2bf225238be.webp",
     "static/media/plus-jakarta-sans-latin-400-normal.woff": "/My-Portfolio/static/media/plus-jakarta-sans-latin-400-normal.742170ba1eaa818debf4.woff",
@@ -60,7 +60,7 @@
     "static/media/icons8-css3.svg": "/My-Portfolio/static/media/icons8-css3.64fa1d1c4801d931c3717be71f6c020e.svg",
     "static/media/icons8-html-5.svg": "/My-Portfolio/static/media/icons8-html-5.8ae3d4adcd70a1028a6377697d9f33b0.svg",
     "main.03a51e85.css.map": "/My-Portfolio/static/css/main.03a51e85.css.map",
-    "main.6b755512.js.map": "/My-Portfolio/static/js/main.6b755512.js.map",
+    "main.516f2798.js.map": "/My-Portfolio/static/js/main.516f2798.js.map",
     "220.5a0356b8.chunk.js.map": "/My-Portfolio/static/js/220.5a0356b8.chunk.js.map",
     "694.c2152ece.chunk.js.map": "/My-Portfolio/static/js/694.c2152ece.chunk.js.map",
     "885.649e9537.chunk.js.map": "/My-Portfolio/static/js/885.649e9537.chunk.js.map",
@@ -77,6 +77,6 @@
   },
   "entrypoints": [
     "static/css/main.03a51e85.css",
-    "static/js/main.6b755512.js"
+    "static/js/main.516f2798.js"
   ]
 }
